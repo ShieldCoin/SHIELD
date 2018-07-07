@@ -1,0 +1,7 @@
+[main]
+host = https://www.transifex.com
+
+[shield.qt-translation-016x]
+file_filter = src/qt/locale/shield_<lang>.ts
+source_file = src/qt/locale/shield_en.ts
+source_lang = en

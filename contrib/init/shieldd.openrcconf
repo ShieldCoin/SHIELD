@@ -1,0 +1,33 @@
+# /etc/conf.d/shieldd: config file for /etc/init.d/shieldd
+
+# Config file location
+#SHIELDD_CONFIGFILE="/etc/shield/shield.conf"
+
+# What directory to write pidfile to?  (created and owned by $SHIELDD_USER)
+#SHIELDD_PIDDIR="/var/run/shieldd"
+
+# What filename to give the pidfile
+#SHIELDD_PIDFILE="${SHIELDD_PIDDIR}/shieldd.pid"
+
+# Where to write shieldd data (be mindful that the blockchain is large)
+#SHIELDD_DATADIR="/var/lib/shieldd"
+
+# User and group to own shieldd process
+#SHIELDD_USER="shield"
+#SHIELDD_GROUP="shield"
+
+# Path to shieldd executable
+#SHIELDD_BIN="/usr/bin/shieldd"
+
+# Nice value to run shieldd under
+#SHIELDD_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#SHIELDD_OPTS=""
+
+# The timeout in seconds OpenRC will wait for shieldd to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+SHIELDD_SIGTERM_TIMEOUT=60

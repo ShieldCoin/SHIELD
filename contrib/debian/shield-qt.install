@@ -1,0 +1,6 @@
+usr/local/bin/shield-qt usr/bin
+share/pixmaps/shield32.xpm usr/share/pixmaps
+share/pixmaps/shield16.xpm usr/share/pixmaps
+share/pixmaps/shield128.png usr/share/pixmaps
+debian/shield-qt.desktop usr/share/applications
+debian/shield-qt.protocol usr/share/kde4/services/

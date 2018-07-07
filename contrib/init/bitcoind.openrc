@@ -1,0 +1,92 @@
+#!/sbin/openrc-run
+
+# backward compatibility for existing gentoo layout 
+#
+if [ -d "/var/lib/shield/.shield3" ]; then
+	SHIELDD_DEFAULT_DATADIR="/var/lib/shield/.shield3"
+else
+	SHIELDD_DEFAULT_DATADIR="/var/lib/shieldd"
+fi
+
+SHIELDD_CONFIGFILE=${SHIELDD_CONFIGFILE:-/etc/shield/shield.conf}
+SHIELDD_PIDDIR=${SHIELDD_PIDDIR:-/var/run/shieldd}
+SHIELDD_PIDFILE=${SHIELDD_PIDFILE:-${SHIELDD_PIDDIR}/shieldd.pid}
+SHIELDD_DATADIR=${SHIELDD_DATADIR:-${SHIELDD_DEFAULT_DATADIR}}
+SHIELDD_USER=${SHIELDD_USER:-${SHIELD_USER:-shield}}
+SHIELDD_GROUP=${SHIELDD_GROUP:-shield}
+SHIELDD_BIN=${SHIELDD_BIN:-/usr/bin/shieldd}
+SHIELDD_NICE=${SHIELDD_NICE:-${NICELEVEL:-0}}
+SHIELDD_OPTS="${SHIELDD_OPTS:-${SHIELD_OPTS}}"
+
+name="SHIELD Core Daemon"
+description="SHIELD cryptocurrency P2P network daemon"
+
+command="/usr/bin/shieldd"
+command_args="-pid=\"${SHIELDD_PIDFILE}\" \
+		-conf=\"${SHIELDD_CONFIGFILE}\" \
+		-datadir=\"${SHIELDD_DATADIR}\" \
+		-daemon \
+		${SHIELDD_OPTS}"
+
+required_files="${SHIELDD_CONFIGFILE}"
+start_stop_daemon_args="-u ${SHIELDD_USER} \
+			-N ${SHIELDD_NICE} -w 2000"
+pidfile="${SHIELDD_PIDFILE}"
+
+# The retry schedule to use when stopping the daemon. Could be either
+# a timeout in seconds or multiple signal/timeout pairs (like
+# "SIGKILL/180 SIGTERM/300")
+retry="${SHIELDD_SIGTERM_TIMEOUT}"
+
+depend() {
+	need localmount net
+}
+
+# verify
+# 1) that the datadir exists and is writable (or create it)
+# 2) that a directory for the pid exists and is writable
+# 3) ownership and permissions on the config file
+start_pre() {
+	checkpath \
+	-d \
+	--mode 0750 \
+	--owner "${SHIELDD_USER}:${SHIELDD_GROUP}" \
+	"${SHIELDD_DATADIR}"
+
+	checkpath \
+	-d \
+	--mode 0755 \
+	--owner "${SHIELDD_USER}:${SHIELDD_GROUP}" \
+	"${SHIELDD_PIDDIR}"
+
+	checkpath -f \
+	-o ${SHIELDD_USER}:${SHIELDD_GROUP} \
+	-m 0660 \
+	${SHIELDD_CONFIGFILE}
+
+	checkconfig || return 1
+}
+
+checkconfig()
+{
+	if ! grep -qs '^rpcpassword=' "${SHIELDD_CONFIGFILE}" ; then
+		eerror ""
+		eerror "ERROR: You must set a secure rpcpassword to run shieldd."
+		eerror "The setting must appear in ${SHIELDD_CONFIGFILE}"
+		eerror ""
+		eerror "This password is security critical to securing wallets "
+		eerror "and must not be the same as the rpcuser setting."
+		eerror "You can generate a suitable random password using the following "
+		eerror "command from the shell:"
+		eerror ""
+		eerror "bash -c 'tr -dc a-zA-Z0-9 < /dev/urandom | head -c32 && echo'"
+		eerror ""
+		eerror "It is recommended that you also set alertnotify so you are "
+		eerror "notified of problems:"
+		eerror ""
+		eerror "ie: alertnotify=echo %%s | mail -s \"SHIELD Alert\"" \
+			"admin@foo.com"
+		eerror ""
+		return 1
+	fi
+}

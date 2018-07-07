@@ -1,0 +1,67 @@
+#!/bin/bash
+#
+#  shieldd The shield core server.
+#
+#
+# chkconfig: 345 80 20
+# description: shieldd
+# processname: shieldd
+#
+
+# Source function library.
+. /etc/init.d/functions
+
+# you can override defaults in /etc/sysconfig/shieldd, see below
+if [ -f /etc/sysconfig/shieldd ]; then
+        . /etc/sysconfig/shieldd
+fi
+
+RETVAL=0
+
+prog=shieldd
+# you can override the lockfile via SHIELDD_LOCKFILE in /etc/sysconfig/shieldd
+lockfile=${SHIELDD_LOCKFILE-/var/lock/subsys/shieldd}
+
+# shieldd defaults to /usr/bin/shieldd, override with SHIELDD_BIN
+shieldd=${SHIELDD_BIN-/usr/bin/shieldd}
+
+# shieldd opts default to -disablewallet, override with SHIELDD_OPTS
+shieldd_opts=${SHIELDD_OPTS--disablewallet}
+
+start() {
+    echo -n $"Starting $prog: "
+    daemon $DAEMONOPTS $shieldd $shieldd_opts
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && touch $lockfile
+    return $RETVAL
+}
+
+stop() {
+    echo -n $"Stopping $prog: "
+    killproc $prog
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && rm -f $lockfile
+    return $RETVAL
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    status)
+        status $prog
+        ;;
+    restart)
+        stop
+        start
+        ;;
+    *)
+        echo "Usage: service $prog {start|stop|status|restart}"
+        exit 1
+        ;;
+esac

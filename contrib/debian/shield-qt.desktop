@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Name=SHIELD Core
+Comment=Connect to the SHIELD P2P Network
+Comment[de]=Verbinde mit dem SHIELD peer-to-peer Netzwerk
+Comment[fr]=SHIELD, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=SHIELD, eşten eşe kriptografik sanal para birimi
+Exec=shield-qt %u
+Terminal=false
+Type=Application
+Icon=shield128
+MimeType=x-scheme-handler/shield;
+Categories=Office;Finance;P2P;Network;Qt;
+StartupWMClass=shield-qt

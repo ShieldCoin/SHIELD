@@ -1,0 +1,8 @@
+/usr/bin/shield-cli		--	gen_context(system_u:object_r:shield_exec_t,s0)
+/usr/sbin/shieldd		--	gen_context(system_u:object_r:shield_exec_t,s0)
+/usr/lib(64)?/shield/shieldd		--	gen_context(system_u:object_r:shield_exec_t,s0)
+
+/etc/shield(/.*)?		gen_context(system_u:object_r:shield_conf_t,s0)
+/var/lib/shield(/.*)?		gen_context(system_u:object_r:shield_var_lib_t,s0)
+
+(/var)?/run/shieldd(/.*)?   gen_context(system_u:object_r:shield_var_run_t,s0)
