@@ -131,9 +131,7 @@ public:
     uint256() {}
     explicit uint256(const std::vector<unsigned char>& vch) : base_blob<256>(vch) {}
     uint256(uint512& dat){
-        for (unsigned int i = 0; i < 256/64; i++){
-            data[i] = dat.GetUint64(i * 64);
-        }
+        memcpy(begin(), dat.begin(), size());
     }
 
     int GetNibble(int index) const 
