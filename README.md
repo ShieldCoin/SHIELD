@@ -1,9 +1,9 @@
 SHIELD Core integration/staging tree
 =====================================
 
-[![Build Status](https://travis-ci.org/shield/shield.svg?branch=master)](https://travis-ci.org/shield/shield)
+[![Build Status](https://travis-ci.org/ShieldCoin/shield.svg?branch=master)](https://travis-ci.org/ShieldCoin/shield)
 
-https://shieldcore.org
+https://shieldx.sh
 
 What is SHIELD?
 ----------------
@@ -15,7 +15,7 @@ out collectively by the network. SHIELD Core is the name of open source
 software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the SHIELD Core software, see https://shield.org/en/download, or read the
+the SHIELD Core software, see https://shieldx.sh/wallets, or read the
 [original whitepaper](https://shieldcore.org/shield.pdf).
 
 License
