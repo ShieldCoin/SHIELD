@@ -414,7 +414,7 @@ unsigned int LwmaCalculateNextWorkRequired(const CBlockIndex* pindexLast, int al
     //  Some coins took out a variable, and need to change the 2*60*60 here:
     //  if (block.GetBlockTime() > nAdjustedTime + 2 * 60 * 60)
 
-    const int64_t FTL = MAX_FUTURE_BLOCK_TIME;
+    const int64_t FTL = GetMaxClockDrift(pindexLast->nHeight);
     const int64_t T = GetTargetSpacing(pindexLast->nHeight);
     const int64_t N = 60; // Avg Window
     const int64_t k = N*(N+1)*T/2; 
