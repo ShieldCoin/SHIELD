@@ -18,7 +18,7 @@ const std::string CLIENT_NAME("Hadron");
 /**
  * Client version number
  */
-#define CLIENT_VERSION_SUFFIX "-beta"
+#define CLIENT_VERSION_SUFFIX ""
 
 
 /**
