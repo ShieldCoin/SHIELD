@@ -22,7 +22,10 @@ CMD_ROOT_DIR = '`git rev-parse --show-toplevel`/{}'.format(FOLDER_GREP)
 CMD_GREP_ARGS = r"git grep --perl-regexp '{}' -- {} ':(exclude){}'".format(REGEX_ARG, CMD_ROOT_DIR, FOLDER_TEST)
 CMD_GREP_DOCS = r"git grep --perl-regexp '{}' {}".format(REGEX_DOC, CMD_ROOT_DIR)
 # list unsupported, deprecated and duplicate args as they need no documentation
-SET_DOC_OPTIONAL = set(['-rpcssl', '-benchmark', '-h', '-help', '-socks', '-tor', '-debugnet', '-whitelistalwaysrelay', '-promiscuousmempoolflags', '-blockminsize', '-dbcrashratio', '-forcecompactdb', '-usehd'])
+SET_DOC_OPTIONAL = set(['-rpcssl', '-benchmark', '-h', '-help', '-socks', '-tor', '-debugnet', '-whitelistalwaysrelay', '-promiscuousmempoolflags', '-blockminsize', '-dbcrashratio', '-forcecompactdb', '-usehd',
+# Testcases
+'-i', '-nofff', '-foo', '-d', '-ccc', '-a', '-noi', '-f', '-e', '-noggg', '-iii', '-b','-ggg', '-fo', '-nob', '-fooo', '-bar', '-z', '-noh', '-fff', '-c', '-zzz'
+])
 
 
 def main():

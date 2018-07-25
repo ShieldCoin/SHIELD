@@ -211,15 +211,11 @@ unsigned int GetNextTargetRequired_V2(const CBlockIndex* pindexLast, int algo, c
     // both of these check the shortest interval to quickly stop when overshot.  Otherwise first is longer and second shorter.
     if (avgOf5 < toofast && avgOf9 < toofast && avgOf17 < toofast)
     {  //emergency adjustment, slow down (longer intervals because shorter blocks)
-      if (gArgs.GetBoolArg("-debugdgw", false))
-        printf("difficulty: GetNextWorkRequired EMERGENCY RETARGET\n");
       difficultyfactor *= 8;
       difficultyfactor /= 5;
     }
     else if (avgOf5 > tooslow && avgOf7 > tooslow && avgOf9 > tooslow)
     {  //emergency adjustment, speed up (shorter intervals because longer blocks)
-    if (gArgs.GetBoolArg("-debugdgw", false))
-        printf("difficulty: GetNextWorkRequired EMERGENCY RETARGET\n");
       difficultyfactor *= 5;
       difficultyfactor /= 8;
     }
@@ -230,8 +226,6 @@ unsigned int GetNextTargetRequired_V2(const CBlockIndex* pindexLast, int algo, c
     { // At least 3 averages too high or at least 3 too low, including the two longest. This will be executed 3/16 of
       // the time on the basis of random variation, even if the settings are perfect. It regulates one-sixth of the way
       // to the calculated point.
-      if (gArgs.GetBoolArg("-debugdgw", false))
-        printf("difficulty: GetNextWorkRequired RETARGET\n");
       difficultyfactor *= (6 * nIntervalDesired);
       difficultyfactor /= (avgOf17 +(5 * nIntervalDesired));
     }
@@ -254,15 +248,6 @@ unsigned int GetNextTargetRequired_V2(const CBlockIndex* pindexLast, int algo, c
 
     if (bnNew > UintToArith256(params.powLimit))
       bnNew = UintToArith256(params.powLimit);
-    if (gArgs.GetBoolArg("-debugdgw", false)){
-        // printf("difficulty: ctual time %" PRId64 ", Scheduled time for this block height = %" PRId64 "\n", now, BlockHeightTime );
-        // printf("difficulty: Nominal block interval = %u, regulating on interval %" PRId64 " to get back to schedule.\n", 
-        //     GetTargetSpacing(pindexLast->nHeight), nIntervalDesired );
-        // printf("difficulty: Intervals of last 5/7/9/17 blocks = %" PRId64 "/ %" PRId64 " / %" PRId64 " / %" PRId64 ".\n",
-        //     avgOf5, avgOf7, avgOf9, avgOf17);
-        printf("difficulty: Difficulty Before Adjustment: %u  %s\n", pindexLast->nBits, bnOld.ToString().c_str());
-        printf("difficulty: Difficulty After Adjustment:  %u  %s\n", bnNew.GetCompact(), bnNew.ToString().c_str());
-    }
     return bnNew.GetCompact();
      
 }
@@ -326,9 +311,6 @@ unsigned int DarkGravityWave3(const CBlockIndex* pindexLast, int algo, const Con
 
     long long nTargetTimespan = CountBlocks * GetTargetSpacing(pindexLast->nHeight);
 
-    // if (gArgs.GetBoolArg("-debugdgw", false))
-    // 	printf("DGW(%s): nActualTimespan = %" PRI64d", nTargetTimespan = %" PRI64d"\n", GetAlgoName(algo).c_str(), nActualTimespan, nTargetTimespan);
-
     if (nActualTimespan < nTargetTimespan/3)
         nActualTimespan = nTargetTimespan/3;
 
@@ -341,14 +323,6 @@ unsigned int DarkGravityWave3(const CBlockIndex* pindexLast, int algo, const Con
 
     if (bnNew > UintToArith256(params.powLimit))
         bnNew = UintToArith256(params.powLimit);
-
-    if (gArgs.GetBoolArg("-debugdgw", false)) {
-        printf("Difficulty Retarget - Dark Gravity Well version 3 at height: %d\n", pindexLast->nHeight);
-        // printf("  nActualTimespan = %" PRI64d", nTargetTimespan = %" PRI64d"\n", nActualTimespan, nTargetTimespan);
-        printf("  PastDifficultyAverage: %08x  %s\n", PastDifficultyAverage.GetCompact(), PastDifficultyAverage.ToString().c_str());
-        printf("  Before:                %08x  %s\n", BlockLastSolved->nBits, arith_uint256().SetCompact(BlockLastSolved->nBits).ToString().c_str());
-        printf("  After:                 %08x  %s\n\n\n", bnNew.GetCompact(), bnNew.ToString().c_str());
-    }
 
     return bnNew.GetCompact();
 }
@@ -414,7 +388,7 @@ unsigned int LwmaCalculateNextWorkRequired(const CBlockIndex* pindexLast, int al
     //  Some coins took out a variable, and need to change the 2*60*60 here:
     //  if (block.GetBlockTime() > nAdjustedTime + 2 * 60 * 60)
 
-    const int64_t FTL = MAX_FUTURE_BLOCK_TIME;
+    const int64_t FTL = GetMaxClockDrift(pindexLast->nHeight);
     const int64_t T = GetTargetSpacing(pindexLast->nHeight);
     const int64_t N = 60; // Avg Window
     const int64_t k = N*(N+1)*T/2; 

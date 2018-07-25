@@ -116,6 +116,19 @@ CAmount AmountFromValue(const UniValue& value)
     return amount;
 }
 
+CAmount SafeAmountFromValue(const UniValue& value)
+{
+    double dAmount = value.get_real();
+    if (dAmount <= 0.0 || dAmount > MAX_MONEY)
+        throw JSONRPCError(RPC_TYPE_ERROR, "Invalid amount");
+    CAmount nAmount = (int64_t)(dAmount * COIN);
+    if (!MoneyRange(nAmount))
+        throw JSONRPCError(RPC_TYPE_ERROR, "Amount out of range");
+    return nAmount;
+}
+
+
+
 uint256 ParseHashV(const UniValue& v, std::string strName)
 {
     std::string strHex;

@@ -1,5 +1,5 @@
-#ifndef SCRYPT_H
-#define SCRYPT_H
+#ifndef SHIELD_CRYPTO_POW_SCRYPT_H
+#define SHIELD_CRYPTO_POW_SCRYPT_H
 #include <stdlib.h>
 #include <stdint.h>
 

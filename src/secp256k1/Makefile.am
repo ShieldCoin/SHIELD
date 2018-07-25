@@ -1,177 +1,109 @@
 ACLOCAL_AMFLAGS = -I build-aux/m4
+.PHONY: gen
+.INTERMEDIATE: $(GENBIN)
 
-lib_LTLIBRARIES = libsecp256k1.la
-if USE_JNI
-JNI_LIB = libsecp256k1_jni.la
-noinst_LTLIBRARIES = $(JNI_LIB)
-else
-JNI_LIB =
-endif
-include_HEADERS = include/secp256k1.h
-noinst_HEADERS =
-noinst_HEADERS += src/scalar.h
-noinst_HEADERS += src/scalar_4x64.h
-noinst_HEADERS += src/scalar_8x32.h
-noinst_HEADERS += src/scalar_low.h
-noinst_HEADERS += src/scalar_impl.h
-noinst_HEADERS += src/scalar_4x64_impl.h
-noinst_HEADERS += src/scalar_8x32_impl.h
-noinst_HEADERS += src/scalar_low_impl.h
-noinst_HEADERS += src/group.h
-noinst_HEADERS += src/group_impl.h
-noinst_HEADERS += src/num_gmp.h
-noinst_HEADERS += src/num_gmp_impl.h
-noinst_HEADERS += src/ecdsa.h
-noinst_HEADERS += src/ecdsa_impl.h
-noinst_HEADERS += src/eckey.h
-noinst_HEADERS += src/eckey_impl.h
-noinst_HEADERS += src/ecmult.h
-noinst_HEADERS += src/ecmult_impl.h
-noinst_HEADERS += src/ecmult_const.h
-noinst_HEADERS += src/ecmult_const_impl.h
-noinst_HEADERS += src/ecmult_gen.h
-noinst_HEADERS += src/ecmult_gen_impl.h
-noinst_HEADERS += src/num.h
-noinst_HEADERS += src/num_impl.h
-noinst_HEADERS += src/field_10x26.h
-noinst_HEADERS += src/field_10x26_impl.h
-noinst_HEADERS += src/field_5x52.h
-noinst_HEADERS += src/field_5x52_impl.h
-noinst_HEADERS += src/field_5x52_int128_impl.h
-noinst_HEADERS += src/field_5x52_asm_impl.h
-noinst_HEADERS += src/java/org_shield_NativeSecp256k1.h
-noinst_HEADERS += src/java/org_shield_Secp256k1Context.h
-noinst_HEADERS += src/util.h
-noinst_HEADERS += src/testrand.h
-noinst_HEADERS += src/testrand_impl.h
-noinst_HEADERS += src/hash.h
-noinst_HEADERS += src/hash_impl.h
-noinst_HEADERS += src/field.h
-noinst_HEADERS += src/field_impl.h
-noinst_HEADERS += src/bench.h
-noinst_HEADERS += contrib/lax_der_parsing.h
-noinst_HEADERS += contrib/lax_der_parsing.c
-noinst_HEADERS += contrib/lax_der_privatekey_parsing.h
-noinst_HEADERS += contrib/lax_der_privatekey_parsing.c
+include_HEADERS = include/univalue.h
+noinst_HEADERS = lib/univalue_escapes.h lib/univalue_utffilter.h
 
-if USE_EXTERNAL_ASM
-COMMON_LIB = libsecp256k1_common.la
-noinst_LTLIBRARIES = $(COMMON_LIB)
-else
-COMMON_LIB =
-endif
+lib_LTLIBRARIES = libunivalue.la
 
 pkgconfigdir = $(libdir)/pkgconfig
-pkgconfig_DATA = libsecp256k1.pc
+pkgconfig_DATA = pc/libunivalue.pc
 
-if USE_EXTERNAL_ASM
-if USE_ASM_ARM
-libsecp256k1_common_la_SOURCES = src/asm/field_10x26_arm.s
-endif
-endif
+libunivalue_la_SOURCES = \
+	lib/univalue.cpp \
+	lib/univalue_read.cpp \
+	lib/univalue_write.cpp
 
-libsecp256k1_la_SOURCES = src/secp256k1.c
-libsecp256k1_la_CPPFLAGS = -DSECP256K1_BUILD -I$(top_srcdir)/include -I$(top_srcdir)/src $(SECP_INCLUDES)
-libsecp256k1_la_LIBADD = $(JNI_LIB) $(SECP_LIBS) $(COMMON_LIB)
+libunivalue_la_LDFLAGS = \
+	-version-info $(LIBUNIVALUE_CURRENT):$(LIBUNIVALUE_REVISION):$(LIBUNIVALUE_AGE) \
+	-no-undefined
+libunivalue_la_CXXFLAGS = -I$(top_srcdir)/include
 
-libsecp256k1_jni_la_SOURCES  = src/java/org_shield_NativeSecp256k1.c src/java/org_shield_Secp256k1Context.c
-libsecp256k1_jni_la_CPPFLAGS = -DSECP256K1_BUILD $(JNI_INCLUDES)
+TESTS = test/unitester test/no_nul
 
-noinst_PROGRAMS =
-if USE_BENCHMARK
-noinst_PROGRAMS += bench_verify bench_sign bench_internal
-bench_verify_SOURCES = src/bench_verify.c
-bench_verify_LDADD = libsecp256k1.la $(SECP_LIBS) $(SECP_TEST_LIBS) $(COMMON_LIB)
-bench_sign_SOURCES = src/bench_sign.c
-bench_sign_LDADD = libsecp256k1.la $(SECP_LIBS) $(SECP_TEST_LIBS) $(COMMON_LIB)
-bench_internal_SOURCES = src/bench_internal.c
-bench_internal_LDADD = $(SECP_LIBS) $(COMMON_LIB)
-bench_internal_CPPFLAGS = -DSECP256K1_BUILD $(SECP_INCLUDES)
-endif
+GENBIN = gen/gen$(BUILD_EXEEXT)
+GEN_SRCS = gen/gen.cpp
 
-TESTS =
-if USE_TESTS
-noinst_PROGRAMS += tests
-tests_SOURCES = src/tests.c
-tests_CPPFLAGS = -DSECP256K1_BUILD -I$(top_srcdir)/src -I$(top_srcdir)/include $(SECP_INCLUDES) $(SECP_TEST_INCLUDES)
-if !ENABLE_COVERAGE
-tests_CPPFLAGS += -DVERIFY
-endif
-tests_LDADD = $(SECP_LIBS) $(SECP_TEST_LIBS) $(COMMON_LIB)
-tests_LDFLAGS = -static
-TESTS += tests
-endif
+$(GENBIN): $(GEN_SRCS)
+	@echo Building $@
+	$(AM_V_at)c++ -I$(top_srcdir)/include -o $@ $<
 
-if USE_EXHAUSTIVE_TESTS
-noinst_PROGRAMS += exhaustive_tests
-exhaustive_tests_SOURCES = src/tests_exhaustive.c
-exhaustive_tests_CPPFLAGS = -DSECP256K1_BUILD -I$(top_srcdir)/src $(SECP_INCLUDES)
-if !ENABLE_COVERAGE
-exhaustive_tests_CPPFLAGS += -DVERIFY
-endif
-exhaustive_tests_LDADD = $(SECP_LIBS)
-exhaustive_tests_LDFLAGS = -static
-TESTS += exhaustive_tests
-endif
+gen: lib/univalue_escapes.h $(GENBIN)
+	@echo Updating $<
+	$(AM_V_at)$(GENBIN) > lib/univalue_escapes.h
 
-JAVAROOT=src/java
-JAVAORG=org/shield
-JAVA_GUAVA=$(srcdir)/$(JAVAROOT)/guava/guava-18.0.jar
-CLASSPATH_ENV=CLASSPATH=$(JAVA_GUAVA)
-JAVA_FILES= \
-  $(JAVAROOT)/$(JAVAORG)/NativeSecp256k1.java \
-  $(JAVAROOT)/$(JAVAORG)/NativeSecp256k1Test.java \
-  $(JAVAROOT)/$(JAVAORG)/NativeSecp256k1Util.java \
-  $(JAVAROOT)/$(JAVAORG)/Secp256k1Context.java
+noinst_PROGRAMS = $(TESTS) test/test_json
 
-if USE_JNI
+TEST_DATA_DIR=test
 
-$(JAVA_GUAVA):
-	@echo Guava is missing. Fetch it via: \
-	wget https://search.maven.org/remotecontent?filepath=com/google/guava/guava/18.0/guava-18.0.jar -O $(@)
-	@false
+test_unitester_SOURCES = test/unitester.cpp
+test_unitester_LDADD = libunivalue.la
+test_unitester_CXXFLAGS = -I$(top_srcdir)/include -DJSON_TEST_SRC=\"$(srcdir)/$(TEST_DATA_DIR)\"
+test_unitester_LDFLAGS = -static $(LIBTOOL_APP_LDFLAGS)
 
-.stamp-java: $(JAVA_FILES)
-	@echo   Compiling $^
-	$(AM_V_at)$(CLASSPATH_ENV) javac $^
-	@touch $@
+test_test_json_SOURCES = test/test_json.cpp
+test_test_json_LDADD = libunivalue.la
+test_test_json_CXXFLAGS = -I$(top_srcdir)/include
+test_test_json_LDFLAGS = -static $(LIBTOOL_APP_LDFLAGS)
 
-if USE_TESTS
+test_no_nul_SOURCES = test/no_nul.cpp
+test_no_nul_LDADD = libunivalue.la
+test_no_nul_CXXFLAGS = -I$(top_srcdir)/include
+test_no_nul_LDFLAGS = -static $(LIBTOOL_APP_LDFLAGS)
 
-check-java: libsecp256k1.la $(JAVA_GUAVA) .stamp-java
-	$(AM_V_at)java -Djava.library.path="./:./src:./src/.libs:.libs/" -cp "$(JAVA_GUAVA):$(JAVAROOT)" $(JAVAORG)/NativeSecp256k1Test
+TEST_FILES = \
+	$(TEST_DATA_DIR)/fail10.json \
+	$(TEST_DATA_DIR)/fail11.json \
+	$(TEST_DATA_DIR)/fail12.json \
+	$(TEST_DATA_DIR)/fail13.json \
+	$(TEST_DATA_DIR)/fail14.json \
+	$(TEST_DATA_DIR)/fail15.json \
+	$(TEST_DATA_DIR)/fail16.json \
+	$(TEST_DATA_DIR)/fail17.json \
+	$(TEST_DATA_DIR)/fail18.json \
+	$(TEST_DATA_DIR)/fail19.json \
+	$(TEST_DATA_DIR)/fail1.json \
+	$(TEST_DATA_DIR)/fail20.json \
+	$(TEST_DATA_DIR)/fail21.json \
+	$(TEST_DATA_DIR)/fail22.json \
+	$(TEST_DATA_DIR)/fail23.json \
+	$(TEST_DATA_DIR)/fail24.json \
+	$(TEST_DATA_DIR)/fail25.json \
+	$(TEST_DATA_DIR)/fail26.json \
+	$(TEST_DATA_DIR)/fail27.json \
+	$(TEST_DATA_DIR)/fail28.json \
+	$(TEST_DATA_DIR)/fail29.json \
+	$(TEST_DATA_DIR)/fail2.json \
+	$(TEST_DATA_DIR)/fail30.json \
+	$(TEST_DATA_DIR)/fail31.json \
+	$(TEST_DATA_DIR)/fail32.json \
+	$(TEST_DATA_DIR)/fail33.json \
+	$(TEST_DATA_DIR)/fail34.json \
+	$(TEST_DATA_DIR)/fail35.json \
+	$(TEST_DATA_DIR)/fail36.json \
+	$(TEST_DATA_DIR)/fail37.json \
+	$(TEST_DATA_DIR)/fail38.json \
+	$(TEST_DATA_DIR)/fail39.json \
+	$(TEST_DATA_DIR)/fail40.json \
+	$(TEST_DATA_DIR)/fail41.json \
+	$(TEST_DATA_DIR)/fail42.json \
+	$(TEST_DATA_DIR)/fail3.json \
+	$(TEST_DATA_DIR)/fail4.json \
+	$(TEST_DATA_DIR)/fail5.json \
+	$(TEST_DATA_DIR)/fail6.json \
+	$(TEST_DATA_DIR)/fail7.json \
+	$(TEST_DATA_DIR)/fail8.json \
+	$(TEST_DATA_DIR)/fail9.json \
+	$(TEST_DATA_DIR)/pass1.json \
+	$(TEST_DATA_DIR)/pass2.json \
+	$(TEST_DATA_DIR)/pass3.json \
+	$(TEST_DATA_DIR)/round1.json \
+	$(TEST_DATA_DIR)/round2.json \
+	$(TEST_DATA_DIR)/round3.json \
+	$(TEST_DATA_DIR)/round4.json \
+	$(TEST_DATA_DIR)/round5.json \
+	$(TEST_DATA_DIR)/round6.json \
+	$(TEST_DATA_DIR)/round7.json
 
-endif
-endif
-
-if USE_ECMULT_STATIC_PRECOMPUTATION
-CPPFLAGS_FOR_BUILD +=-I$(top_srcdir)
-CFLAGS_FOR_BUILD += -Wall -Wextra -Wno-unused-function
-
-gen_context_OBJECTS = gen_context.o
-gen_context_BIN = gen_context$(BUILD_EXEEXT)
-gen_%.o: src/gen_%.c
-	$(CC_FOR_BUILD) $(CPPFLAGS_FOR_BUILD) $(CFLAGS_FOR_BUILD) -c $< -o $@
-
-$(gen_context_BIN): $(gen_context_OBJECTS)
-	$(CC_FOR_BUILD) $^ -o $@
-
-$(libsecp256k1_la_OBJECTS): src/ecmult_static_context.h
-$(tests_OBJECTS): src/ecmult_static_context.h
-$(bench_internal_OBJECTS): src/ecmult_static_context.h
-
-src/ecmult_static_context.h: $(gen_context_BIN)
-	./$(gen_context_BIN)
-
-CLEANFILES = $(gen_context_BIN) src/ecmult_static_context.h $(JAVAROOT)/$(JAVAORG)/*.class .stamp-java
-endif
-
-EXTRA_DIST = autogen.sh src/gen_context.c src/basic-config.h $(JAVA_FILES)
-
-if ENABLE_MODULE_ECDH
-include src/modules/ecdh/Makefile.am.include
-endif
-
-if ENABLE_MODULE_RECOVERY
-include src/modules/recovery/Makefile.am.include
-endif
+EXTRA_DIST=$(TEST_FILES) $(GEN_SRCS)

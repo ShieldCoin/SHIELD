@@ -205,8 +205,9 @@ inline void UnserializeTransaction(TxType& tx, Stream& s) {
     const bool fAllowWitness = !(s.GetVersion() & SERIALIZE_TRANSACTION_NO_WITNESS);
 
     s >> tx.nVersion;
-    s >> tx.nTime;
-    if (tx.nTime < 1507311610 || tx.nTime > 1540188138) // deprecated
+    if (tx.nVersion != 4)
+        s >> tx.nTime;
+    if ((tx.nTime < 1507311610 || tx.nTime > 1540188138) && tx.nVersion != 4) // deprecated
         s.Rewind(sizeof(uint32_t));
     unsigned char flags = 0;
     tx.vin.clear();
@@ -243,7 +244,7 @@ inline void SerializeTransaction(const TxType& tx, Stream& s) {
     const bool fAllowWitness = !(s.GetVersion() & SERIALIZE_TRANSACTION_NO_WITNESS);
 
     s << tx.nVersion;
-    if (tx.nTime > 1507311610 && tx.nTime < 1540188138) // deprecated
+    if ((tx.nTime > 1507311610 && tx.nTime < 1540188138) && tx.nVersion != 4) // deprecated
         s << tx.nTime;
     unsigned char flags = 0;
     // Consistency check
@@ -282,7 +283,7 @@ public:
     // adapting relay policy by bumping MAX_STANDARD_VERSION, and then later date
     // bumping the default CURRENT_VERSION at which point both CURRENT_VERSION and
     // MAX_STANDARD_VERSION will be equal.
-    static const int32_t MAX_STANDARD_VERSION=3;
+    static const int32_t MAX_STANDARD_VERSION=4;
 
     // The local variables are made const to prevent unintended modification
     // without updating the cached hash value. However, CTransaction is not

@@ -88,7 +88,7 @@ int SHIELDUnits::decimals(int unit)
     {
     case XSH: return 6;
     case mXSH: return 3;
-    case uXSH: return 1;
+    case uXSH: return 0;
     default: return 0;
     }
 }
