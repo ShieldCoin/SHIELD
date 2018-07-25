@@ -45,11 +45,11 @@
  * @author   Thomas Pornin <thomas.pornin@cryptolog.com>
  */
 
-#ifndef SPH_WHIRLPOOL_H__
-#define SPH_WHIRLPOOL_H__
+#ifndef SHIELD_CRYPTO_POW_SPH_WHIRLPOOL_H
+#define SHIELD_CRYPTO_POW_SPH_WHIRLPOOL_H
 
 #include <stddef.h>
-#include "sph_types.h"
+#include <crypto/pow/sph_types.h>
 
 #ifdef __cplusplus
 extern "C"{

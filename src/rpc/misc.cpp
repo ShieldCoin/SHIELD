@@ -19,7 +19,6 @@
 #include <rpc/util.h>
 #include <timedata.h>
 #include <util.h>
-#include <rpc/util.h>
 #include <utilstrencodings.h>
 #ifdef ENABLE_WALLET
 #include <wallet/rpcwallet.h>

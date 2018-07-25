@@ -32,11 +32,11 @@
  * @author   Thomas Pornin <thomas.pornin@cryptolog.com>
  */
 
-#ifndef SPH_HAMSI_H__
-#define SPH_HAMSI_H__
+#ifndef SHIELD_CRYPTO_POW_SPH_HAMSI_H
+#define SHIELD_CRYPTO_POW_SPH_HAMSI_H
 
 #include <stddef.h>
-#include "sph_types.h"
+#include <crypto/pow/sph_types.h>
 
 #ifdef __cplusplus
 extern "C"{

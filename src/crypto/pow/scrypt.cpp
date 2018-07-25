@@ -27,15 +27,15 @@
  * online backup system.
  */
 
-#include "config/shield-config.h"
+#include <config/shield-config.h>
 
-#include "scrypt.h"
+#include <crypto/pow/scrypt.h>
 // #include "util.h"
 #include <stdlib.h>
 #include <stdint.h>
 #include <string.h>
 // #include <openssl/sha.h>
-#include "crypto/hmac_sha256.h"
+#include <crypto/hmac_sha256.h>
 
 // #if defined(_MSC_VER)
 // #include <immintrin.h>

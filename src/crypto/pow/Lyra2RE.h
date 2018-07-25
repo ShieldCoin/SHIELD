@@ -1,5 +1,5 @@
-#ifndef LYRA2RE_H
-#define LYRA2RE_H
+#ifndef SHIELD_CRYPTO_POW_LYRA2RE_H
+#define SHIELD_CRYPTO_POW_LYRA2RE_H
 
 #ifdef __cplusplus
 extern "C" {

@@ -1,7 +1,7 @@
 // Copyright (c) 2016 SHIELD Developers
 
-#ifndef PBKDF2_H
-#define PBKDF2_H
+#ifndef SHIELD_CRYPTO_POW_PBKDF2_H
+#define SHIELD_CRYPTO_POW_PBKDF2_H
 
 #include <openssl/sha.h>
 #include <stdint.h>

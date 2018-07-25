@@ -33,15 +33,15 @@
  * @author   Thomas Pornin <thomas.pornin@cryptolog.com>
  */
 
-#ifndef SPH_SIMD_H__
-#define SPH_SIMD_H__
+#ifndef SHIELD_CRYPTO_POW_SPH_SIMD_H
+#define SHIELD_CRYPTO_POW_SPH_SIMD_H
 
 #ifdef __cplusplus
 extern "C"{
 #endif
 
 #include <stddef.h>
-#include "sph_types.h"
+#include <crypto/pow/sph_types.h>
 
 /**
  * Output size (in bits) for SIMD-224.

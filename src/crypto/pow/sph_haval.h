@@ -58,15 +58,15 @@
  * @author   Thomas Pornin <thomas.pornin@cryptolog.com>
  */
 
-#ifndef SPH_HAVAL_H__
-#define SPH_HAVAL_H__
+#ifndef SHIELD_CRYPTO_POW_SPH_HAVAL_H
+#define SHIELD_CRYPTO_POW_SPH_HAVAL_H
 
 #ifdef __cplusplus
 extern "C"{
 #endif
 
 #include <stddef.h>
-#include "sph_types.h"
+#include <crypto/pow/sph_types.h>
 
 /**
  * Output size (in bits) for HAVAL-128/3.
