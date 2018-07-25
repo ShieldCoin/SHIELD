@@ -111,6 +111,7 @@ test/config.ini
 test/cache/*
 
 !src/leveldb*/Makefile
+!depends/Makefile
 
 /doc/doxygen/
 
