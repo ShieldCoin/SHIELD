@@ -319,7 +319,7 @@ crypto_libshield_crypto_base_a_SOURCES = \
   crypto/pow/Sponge.h \
   crypto/pow/blake.c \
   crypto/pow/blake2.h \
-  crypto/pow/blake2-impl.h \
+  crypto/pow/blake2_impl.h \
   crypto/pow/blake2s-ref.c \
   crypto/pow/cubehash.c \
   crypto/pow/echo.c \
