@@ -110,7 +110,7 @@ def get_rpc_cookie():
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
-        print("Usage: linearize-hashes.py CONFIG-FILE")
+    print("Usage: linearize-hashes.py CONFIG-FILE")
         sys.exit(1)
 
     f = open(sys.argv[1], encoding="utf8")

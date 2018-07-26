@@ -849,6 +849,33 @@ static UniValue getblock(const JSONRPCRequest& request)
     return blockToJSON(block, pblockindex, verbosity >= 2);
 }
 
+// Value getrawblockbynumber(const Array& params, bool fHelp)
+static UniValue getrawblockbynumber(const JSONRPCRequest& request)
+{
+    if (request.fHelp || request.params.size() != 1)
+        throw std::runtime_error(
+            "getrawblockbynumber <number>\n"
+            "Returns raw details of a block with given block-number.");
+
+    LOCK(cs_main);
+
+    int nHeight = request.params[0].get_int();
+    if (nHeight < 0 || nHeight > chainActive.Height())
+        throw JSONRPCError(RPC_INVALID_PARAMETER, "Block height out of range");
+
+    CBlockIndex* pblockindex = chainActive[nHeight];
+
+    const CBlock block = GetBlockChecked(pblockindex);
+
+    CDataStream ssTx(SER_NETWORK, PROTOCOL_VERSION);
+
+    ssTx << block;
+    std::string strHex = HexStr(ssTx.begin(), ssTx.end());
+
+    return strHex;
+}
+
+
 struct CCoinsStats
 {
     int nHeight;
@@ -1954,6 +1981,7 @@ static const CRPCCommand commands[] =
     { "blockchain",         "getmempoolentry",        &getmempoolentry,        {"txid"} },
     { "blockchain",         "getmempoolinfo",         &getmempoolinfo,         {} },
     { "blockchain",         "getrawmempool",          &getrawmempool,          {"verbose"} },
+    { "blockchain",         "getrawblockbynumber",    &getrawblockbynumber,    {"blockheight"} },
     { "blockchain",         "gettxout",               &gettxout,               {"txid","n","include_mempool"} },
     { "blockchain",         "gettxoutsetinfo",        &gettxoutsetinfo,        {} },
     { "blockchain",         "pruneblockchain",        &pruneblockchain,        {"height"} },
