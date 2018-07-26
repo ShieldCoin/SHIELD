@@ -346,7 +346,6 @@ crypto_libshield_crypto_base_a_SOURCES = \
   crypto/pow/Lyra2RE.h \
   crypto/pow/scrypt.cpp \
   crypto/pow/scrypt.h \
-  crypto/pow/scrypt-sse2.cpp \
   crypto/pow/shabal.c \
   crypto/pow/shavite.c \
   crypto/pow/simd.c \

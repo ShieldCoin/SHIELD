@@ -242,12 +242,12 @@ void scrypt_detect_sse2()
     __get_cpuid(1, &eax, &ebx, &ecx, &cpuid_edx);
 #endif // _MSC_VER
 
-    if (cpuid_edx & 1<<26)
-    {
-        scrypt_1024_1_1_256_sp_detected = &scrypt_1024_1_1_256_sp_sse2;
-        printf("scrypt: using scrypt-sse2 as detected.\n");
-    }
-    else
+    // if (cpuid_edx & 1<<26)
+    // {
+    //     scrypt_1024_1_1_256_sp_detected = &scrypt_1024_1_1_256_sp_sse2;
+    //     printf("scrypt: using scrypt-sse2 as detected.\n");
+    // }
+    // else
     {
         scrypt_1024_1_1_256_sp_detected = &scrypt_1024_1_1_256_sp_generic;
         printf("scrypt: using scrypt-generic, SSE2 unavailable.\n");

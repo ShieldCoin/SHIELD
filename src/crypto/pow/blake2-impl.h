@@ -11,8 +11,8 @@
    this software. If not, see <http://creativecommons.org/publicdomain/zero/1.0/>.
 */
 #pragma once
-#ifndef SHIELD_CRYPTO_POW_BLAKE2-IMPL_H
-#define SHIELD_CRYPTO_POW_BLAKE2-IMPL_H
+#ifndef SHIELD_CRYPTO_POW_BLAKE2_IMPL_H
+#define SHIELD_CRYPTO_POW_BLAKE2_IMPL_H
 
 #include <stdint.h>
 
