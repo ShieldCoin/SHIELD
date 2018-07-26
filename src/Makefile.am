@@ -308,6 +308,8 @@ crypto_libshield_crypto_base_a_SOURCES = \
   crypto/pow/sph_luffa.h \
   crypto/pow/sph_sha2.h \
   crypto/pow/sph_sha2big.c \
+  crypto/pow/sph_md_helper.c \
+  crypto/pow/md_helper.c \
   crypto/pow/sph_shabal.h \
   crypto/pow/sph_shavite.h \
   crypto/pow/sph_simd.h \
