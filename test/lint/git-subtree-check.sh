@@ -4,11 +4,11 @@
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 export LC_ALL=C
-DIR="$1"
-COMMIT="$2"
-if [ -z "$COMMIT" ]; then
-    COMMIT=HEAD
-fi
+# DIR="$1"
+# COMMIT="$2"
+# if [ -z "$COMMIT" ]; then
+#     COMMIT=HEAD
+# fi
 
 # # Taken from git-subtree (Copyright (C) 2009 Avery Pennarun <apenwarr@gmail.com>)
 # find_latest_squash()
