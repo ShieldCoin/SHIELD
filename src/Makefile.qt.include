@@ -245,7 +245,7 @@ RES_ICONS = \
   qt/res/icons/shield.ico \
   qt/res/icons/shield_testnet.ico \
   qt/res/icons/shield.png \
-  qt/res/icons/splash1.png
+  qt/res/icons/splash1.png \
   qt/res/icons/chevron.png \
   qt/res/icons/clock1.png \
   qt/res/icons/clock2.png \
