@@ -38,15 +38,15 @@
  * @author   Thomas Pornin <thomas.pornin@cryptolog.com>
  */
 
-#ifndef SPH_SKEIN_H__
-#define SPH_SKEIN_H__
+#ifndef SHIELD_CRYPTO_POW_SPH_SKEIN_H
+#define SHIELD_CRYPTO_POW_SPH_SKEIN_H
 
 #ifdef __cplusplus
 extern "C"{
 #endif
 
 #include <stddef.h>
-#include "sph_types.h"
+#include <crypto/pow/sph_types.h>
 
 #if SPH_64
 

@@ -219,6 +219,11 @@ dist_noinst_SCRIPTS = autogen.sh
 EXTRA_DIST = $(DIST_SHARE) test/functional/test_runner.py test/functional $(DIST_CONTRIB) $(DIST_DOCS) $(WINDOWS_PACKAGING) $(OSX_PACKAGING) $(BIN_CHECKS)
 
 EXTRA_DIST += \
+    src/crypto/pow/md_helper.c \
+    src/crypto/pow/sph_md_helper.c \
+    src/crypto/pow/aes_helper.c \
+    src/crypto/pow/hamsi_helper.c \
+    src/crypto/pow/haval_helper.c \
     test/util/shield-util-test.py \
     test/util/data/shield-util-test.json \
     test/util/data/blanktxv1.hex \

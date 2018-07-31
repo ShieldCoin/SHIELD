@@ -545,7 +545,7 @@ static UniValue sendtoaddress(const JSONRPCRequest& request)
     }
 
     // Amount
-    CAmount nAmount = AmountFromValue(request.params[1]);
+    CAmount nAmount = SafeAmountFromValue(request.params[1]);
     if (nAmount <= 0)
         throw JSONRPCError(RPC_TYPE_ERROR, "Invalid amount for send");
 
@@ -994,7 +994,7 @@ static UniValue movecmd(const JSONRPCRequest& request)
 
     std::string strFrom = LabelFromValue(request.params[0]);
     std::string strTo = LabelFromValue(request.params[1]);
-    CAmount nAmount = AmountFromValue(request.params[2]);
+    CAmount nAmount = SafeAmountFromValue(request.params[2]);
     if (nAmount <= 0)
         throw JSONRPCError(RPC_TYPE_ERROR, "Invalid amount for send");
     if (!request.params[3].isNull())
@@ -1061,7 +1061,7 @@ static UniValue sendfrom(const JSONRPCRequest& request)
     if (!IsValidDestination(dest)) {
         throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid SHIELD address");
     }
-    CAmount nAmount = AmountFromValue(request.params[2]);
+    CAmount nAmount = SafeAmountFromValue(request.params[2]);
     if (nAmount <= 0)
         throw JSONRPCError(RPC_TYPE_ERROR, "Invalid amount for send");
     int nMinDepth = 1;
@@ -1240,7 +1240,7 @@ static UniValue sendmany(const JSONRPCRequest& request)
         destinations.insert(dest);
 
         CScript scriptPubKey = GetScriptForDestination(dest);
-        CAmount nAmount = AmountFromValue(sendTo[name_]);
+        CAmount nAmount = SafeAmountFromValue(sendTo[name_]);
         if (nAmount <= 0)
             throw JSONRPCError(RPC_TYPE_ERROR, "Invalid amount for send");
         totalAmount += nAmount;
@@ -2953,7 +2953,7 @@ static UniValue settxfee(const JSONRPCRequest& request)
 
     LOCK2(cs_main, pwallet->cs_wallet);
 
-    CAmount nAmount = AmountFromValue(request.params[0]);
+    CAmount nAmount = SafeAmountFromValue(request.params[0]);
 
     pwallet->m_pay_tx_fee = CFeeRate(nAmount, 1000);
     return true;
@@ -3292,13 +3292,13 @@ static UniValue listunspent(const JSONRPCRequest& request)
         const UniValue& options = request.params[4].get_obj();
 
         if (options.exists("minimumAmount"))
-            nMinimumAmount = AmountFromValue(options["minimumAmount"]);
+            nMinimumAmount = SafeAmountFromValue(options["minimumAmount"]);
 
         if (options.exists("maximumAmount"))
-            nMaximumAmount = AmountFromValue(options["maximumAmount"]);
+            nMaximumAmount = SafeAmountFromValue(options["maximumAmount"]);
 
         if (options.exists("minimumSumAmount"))
-            nMinimumSumAmount = AmountFromValue(options["minimumSumAmount"]);
+            nMinimumSumAmount = SafeAmountFromValue(options["minimumSumAmount"]);
 
         if (options.exists("maximumCount"))
             nMaximumCount = options["maximumCount"].get_int64();
@@ -3496,7 +3496,7 @@ static UniValue fundrawtransaction(const JSONRPCRequest& request)
 
         if (options.exists("feeRate"))
         {
-            coinControl.m_feerate = CFeeRate(AmountFromValue(options["feeRate"]));
+            coinControl.m_feerate = CFeeRate(SafeAmountFromValue(options["feeRate"]));
             coinControl.fOverrideFeeRate = true;
         }
 

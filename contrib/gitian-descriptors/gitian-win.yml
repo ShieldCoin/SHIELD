@@ -22,7 +22,7 @@ packages:
 - "ca-certificates"
 - "python"
 remotes:
-- "url": "https://github.com/shield/shield.git"
+- "url": "https://git.shieldx.sh/SHIELD-team/Core-Projects/SHIELD-Core.git"
   "dir": "shield"
 files: []
 script: |

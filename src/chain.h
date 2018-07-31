@@ -47,6 +47,12 @@ inline int CalculateAvgBlockTimeForHeight(int nHeight){
  */
 static const int64_t MAX_FUTURE_BLOCK_TIME = 2 * 60 * 60;
 
+inline int64_t GetMaxClockDrift(int Height){
+    if (Height < 660000 || (Height < 817500 && Height > 800000))
+        return MAX_FUTURE_BLOCK_TIME;
+    return 10 * 60;
+}
+
 /**
  * Timestamp window used as a grace period by code that compares external
  * timestamps (such as timestamps passed to RPCs, or wallet key creation times)

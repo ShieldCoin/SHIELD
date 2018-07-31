@@ -27,9 +27,9 @@
  * online backup system.
  */
 
-#include "config/shield-config.h"
+#include <config/shield-config.h>
 
-#include "scrypt.h"
+#include <crypto/pow/scrypt.h>
 #include <stdlib.h>
 #include <stdint.h>
 #include <string.h>

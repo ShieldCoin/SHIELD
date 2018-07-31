@@ -1446,11 +1446,37 @@ bool static ProcessHeadersMessage(CNode *pfrom, CConnman *connman, const std::ve
         }
 
         if (nCount == MAX_HEADERS_RESULTS) {
-            // Headers message had its maximum size; the peer may have more headers.
-            // TODO: optimize: if pindexLast is an ancestor of chainActive.Tip or pindexBestHeader, continue
-            // from there instead.
-            LogPrint(BCLog::NET, "more getheaders (%d) to end to peer=%d (startheight:%d)\n", pindexLast->nHeight, pfrom->GetId(), pfrom->nStartingHeight);
-            connman->PushMessage(pfrom, msgMaker.Make(NetMsgType::GETHEADERS, chainActive.GetLocator(pindexLast), uint256()));
+            //
+            // Optimize where to fetch the next headers from. Places the last header could be;-
+            // 1 - neither an ancestor of chainActive.Tip() nor BestHeader. fetch from pindexLast
+            // 2 - ancestor of chainActive.Tip() and BestHeader. fetch from BestHeader
+            // 3 - ancestor of BestHeader not chainActive.Tip(). Tip is an ancestor of BestHeader
+            //     fetch from BestHeader
+            // 4 - ancestor of chainActive.Tip and BestHeader. Tip is forked from BestHeader
+            //     fetch from the point where tip forks from BestHeader (since we don't know which fork
+            //     the other peer is following but can nevertheless assume they don't fork before our fork).
+            // 5 - ancestor of BestHeader not chainActive.Tip(). Tip is forked from BestHeader.
+            //     fetch from pindexLast (not BestHeader, given the unusual circumstances)
+            // 6 - ancestor of chainActive.Tip not BestHeader. Tip is forked from BestHeader.
+            //     fetch from pindexLast (not Tip, given the unusual circumstances)
+
+            const CBlockIndex *pindexContinue = pindexLast;
+            std::string strDesc;
+            if (LastCommonAncestor(pindexLast, pindexBestHeader) == pindexLast) {
+                // received header is an ancestor of pindexBestHeader (cases 2, 3, 4, 5)
+                const CBlockIndex *pindexFork = LastCommonAncestor(pindexBestHeader, chainActive.Tip());
+                if (pindexFork == chainActive.Tip()) {
+                    // Out current tip an ancestor of pindexBestHeader
+                    pindexContinue = pindexBestHeader; // cases 2, 3
+                    strDesc += "best: ";
+                } else if (LastCommonAncestor(pindexFork, pindexLast) == pindexLast) {
+                    // received header is an ancestor of where the tip and BestHeader diverges
+                    pindexContinue = pindexFork; // case 4
+                    strDesc += "fork: ";
+                }
+            }
+            LogPrint(BCLog::NET, "more getheaders (%s%d) to end to peer=%d (startheight:%d)\n", strDesc, pindexContinue->nHeight, pfrom->GetId(), pfrom->nStartingHeight);
+            connman->PushMessage(pfrom, msgMaker.Make(NetMsgType::GETHEADERS, chainActive.GetLocator(pindexContinue), uint256()));
         }
 
         bool fCanDirectFetch = CanDirectFetch(chainparams.GetConsensus());

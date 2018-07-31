@@ -2288,6 +2288,7 @@ void static UpdateTip(const CBlockIndex *pindexNew, const CChainParams& chainPar
         int nUpgraded = 0;
         const CBlockIndex* pindex = pindexNew;
         for (int bit = 0; bit < VERSIONBITS_NUM_BITS; bit++) {
+            if (bit > 10 && bit < 15) continue; // Skip mining algo version bits
             WarningBitsConditionChecker checker(bit);
             ThresholdState state = checker.GetStateFor(pindex, chainParams.GetConsensus(), warningcache[bit]);
             if (state == ThresholdState::ACTIVE || state == ThresholdState::LOCKED_IN) {
@@ -2303,7 +2304,7 @@ void static UpdateTip(const CBlockIndex *pindexNew, const CChainParams& chainPar
         for (int i = 0; i < 100 && pindex != nullptr; i++)
         {
             int32_t nExpectedVersion = ComputeBlockVersion(pindex->pprev, chainParams.GetConsensus()); // FIXME: check for other cases
-            int32_t nCorrectedVersion = pindex->nVersion & ~(BLOCK_VERSION_ALGO); // Remove the Algo versions
+            int32_t nCorrectedVersion = pindex->nVersion & (~BLOCK_VERSION_ALGO); // Remove the Algo versions
             if (nCorrectedVersion > VERSIONBITS_LAST_OLD_BLOCK_VERSION && (nCorrectedVersion & ~nExpectedVersion) != 0)
                 ++nUpgraded;
             pindex = pindex->pprev;
@@ -3303,7 +3304,7 @@ static bool ContextualCheckBlockHeader(const CBlockHeader& block, CValidationSta
         return state.Invalid(false, REJECT_INVALID, "time-too-old", "block's timestamp is too early");
 
     // Check timestamp
-    if (block.GetBlockTime() > nAdjustedTime + MAX_FUTURE_BLOCK_TIME)
+    if (block.GetBlockTime() > nAdjustedTime + GetMaxClockDrift(nHeight))
         return state.Invalid(false, REJECT_INVALID, "time-too-new", "block timestamp too far in the future");
 
     // Reject outdated version blocks when 95% (75% on testnet) of the network has upgraded:

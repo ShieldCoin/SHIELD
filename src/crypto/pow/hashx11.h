@@ -1,18 +1,18 @@
-#ifndef HASH_X11
-#define HASH_X11
+#ifndef SHIELD_CRYPTO_POW_HASHX11_H
+#define SHIELD_CRYPTO_POW_HASHX11_H
 
-#include "uint256.h"
-#include "sph_blake.h"
-#include "sph_bmw.h"
-#include "sph_groestl.h"
-#include "sph_jh.h"
-#include "sph_keccak.h"
-#include "sph_skein.h"
-#include "sph_luffa.h"
-#include "sph_cubehash.h"
-#include "sph_shavite.h"
-#include "sph_simd.h"
-#include "sph_echo.h"
+#include <uint256.h>
+#include <crypto/pow/sph_blake.h>
+#include <crypto/pow/sph_bmw.h>
+#include <crypto/pow/sph_groestl.h>
+#include <crypto/pow/sph_jh.h>
+#include <crypto/pow/sph_keccak.h>
+#include <crypto/pow/sph_skein.h>
+#include <crypto/pow/sph_luffa.h>
+#include <crypto/pow/sph_cubehash.h>
+#include <crypto/pow/sph_shavite.h>
+#include <crypto/pow/sph_simd.h>
+#include <crypto/pow/sph_echo.h>
 
 #include <openssl/sha.h>
 #include <openssl/ripemd.h>

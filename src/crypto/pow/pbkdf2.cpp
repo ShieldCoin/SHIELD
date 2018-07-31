@@ -1,7 +1,7 @@
 // Copyright (c) 2016 SHIELD Developers
 
 #include <string.h>
-#include "pbkdf2.h"
+#include <crypto/pow/pbkdf2.h>
 
 static inline uint32_t
 be32dec(const void *pp)

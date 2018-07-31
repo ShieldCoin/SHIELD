@@ -27,15 +27,15 @@
  * online backup system.
  */
 
-#include "config/shield-config.h"
+#include <config/shield-config.h>
 
-#include "scrypt.h"
+#include <crypto/pow/scrypt.h>
 // #include "util.h"
 #include <stdlib.h>
 #include <stdint.h>
 #include <string.h>
 // #include <openssl/sha.h>
-#include "crypto/hmac_sha256.h"
+#include <crypto/hmac_sha256.h>
 
 // #if defined(_MSC_VER)
 // #include <immintrin.h>
@@ -242,12 +242,12 @@ void scrypt_detect_sse2()
     __get_cpuid(1, &eax, &ebx, &ecx, &cpuid_edx);
 #endif // _MSC_VER
 
-    if (cpuid_edx & 1<<26)
-    {
-        scrypt_1024_1_1_256_sp_detected = &scrypt_1024_1_1_256_sp_sse2;
-        printf("scrypt: using scrypt-sse2 as detected.\n");
-    }
-    else
+    // if (cpuid_edx & 1<<26)
+    // {
+    //     scrypt_1024_1_1_256_sp_detected = &scrypt_1024_1_1_256_sp_sse2;
+    //     printf("scrypt: using scrypt-sse2 as detected.\n");
+    // }
+    // else
     {
         scrypt_1024_1_1_256_sp_detected = &scrypt_1024_1_1_256_sp_generic;
         printf("scrypt: using scrypt-generic, SSE2 unavailable.\n");

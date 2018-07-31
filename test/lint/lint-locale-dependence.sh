@@ -25,6 +25,8 @@ KNOWN_VIOLATIONS=(
     "src/util.cpp:.*atoi"
     "src/util.cpp:.*fprintf"
     "src/util.cpp:.*tolower"
+    "src/rpc/misc.cpp:.*::tolower);"
+    "src/wallet/init.cpp:.*::tolower);"
     "src/utilmoneystr.cpp:.*isdigit"
     "src/utilmoneystr.cpp:.*isspace"
     "src/utilstrencodings.cpp:.*atoi"

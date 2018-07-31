@@ -319,7 +319,7 @@ crypto_libshield_crypto_base_a_SOURCES = \
   crypto/pow/Sponge.h \
   crypto/pow/blake.c \
   crypto/pow/blake2.h \
-  crypto/pow/blake2-impl.h \
+  crypto/pow/blake2_impl.h \
   crypto/pow/blake2s-ref.c \
   crypto/pow/cubehash.c \
   crypto/pow/echo.c \
@@ -346,7 +346,6 @@ crypto_libshield_crypto_base_a_SOURCES = \
   crypto/pow/Lyra2RE.h \
   crypto/pow/scrypt.cpp \
   crypto/pow/scrypt.h \
-  crypto/pow/scrypt-sse2.cpp \
   crypto/pow/shabal.c \
   crypto/pow/shavite.c \
   crypto/pow/simd.c \
@@ -586,7 +585,6 @@ CLEANFILES += zmq/*.gcda zmq/*.gcno
 CLEANFILES += obj/build.h
 
 EXTRA_DIST = $(CTAES_DIST)
-
 
 config/shield-config.h: config/stamp-h1
 	@$(MAKE) -C $(top_builddir) $(subdir)/$(@)

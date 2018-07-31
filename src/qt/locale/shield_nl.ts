@@ -43,11 +43,11 @@
     </message>
     <message>
         <source>Choose the address to send coins to</source>
-        <translation>Kies het adres om munten naar te versturen</translation>
+        <translation>Kies het adres om de SHIELD-munten naar te versturen</translation>
     </message>
     <message>
         <source>Choose the address to receive coins with</source>
-        <translation>Kies het adres om munten op te ontvangen</translation>
+        <translation>Kies het adres om SHIELD-munten op te ontvangen</translation>
     </message>
     <message>
         <source>C&amp;hoose</source>
@@ -63,11 +63,11 @@
     </message>
     <message>
         <source>These are your SHIELD addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Dit zijn uw SHIELDadressen om betalingen mee te verzenden. Controleer altijd het bedrag en het ontvangstadres voordat u uw SHIELD verzendt.</translation>
+        <translation>Dit zijn uw SHIELD-adressen om betalingen mee te verzenden. Controleer altijd het bedrag en het ontvangstadres voordat u uw SHIELD verzendt.</translation>
     </message>
     <message>
         <source>These are your SHIELD addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Dit zijn uw shield-adressen waarmee u betalingen kunt ontvangen. We raden u aan om een nieuw ontvangstadres voor elke transactie te gebruiken.</translation>
+        <translation>Dit zijn uw SHIELD-adressen waarmee u betalingen kunt ontvangen. We raden u aan om een nieuw ontvangstadres voor elke transactie te gebruiken.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -83,11 +83,11 @@
     </message>
     <message>
         <source>Export Address List</source>
-        <translation>Exporteer adreslijst</translation>
+        <translation>Exporteer adressenlijst</translation>
     </message>
     <message>
         <source>Comma separated file (*.csv)</source>
-        <translation>Kommagescheiden bestand (*.csv)</translation>
+        <translation>Komma gescheiden bestand (*.csv)</translation>
     </message>
     <message>
         <source>Exporting Failed</source>
@@ -117,23 +117,23 @@
     <name>AskPassphraseDialog</name>
     <message>
         <source>Passphrase Dialog</source>
-        <translation>Wachtwoordzindialoog</translation>
+        <translation>Wachtwoord dialoog</translation>
     </message>
     <message>
         <source>Enter passphrase</source>
-        <translation>Voer wachtwoordzin in</translation>
+        <translation>Voer het wachtwoord in</translation>
     </message>
     <message>
         <source>New passphrase</source>
-        <translation>Nieuwe wachtwoordzin</translation>
+        <translation>Nieuw wachtwoord</translation>
     </message>
     <message>
         <source>Repeat new passphrase</source>
-        <translation>Herhaal nieuwe wachtwoordzin</translation>
+        <translation>Herhaal het nieuwe wachtwoord</translation>
     </message>
     <message>
         <source>Show password</source>
-        <translation>Laat wachtwoord zien</translation>
+        <translation>Laat het wachtwoord zien</translation>
     </message>
     <message>
         <source>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;ten or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
@@ -141,11 +141,11 @@
     </message>
     <message>
         <source>Encrypt wallet</source>
-        <translation>Versleutel portemonnee</translation>
+        <translation>Versleutel de portemonnee</translation>
     </message>
     <message>
         <source>This operation needs your wallet passphrase to unlock the wallet.</source>
-        <translation>Deze operatie vereist uw portemonneewachtwoord om de portemonnee te openen.</translation>
+        <translation>Deze operatie vereist uw portemonnee-wachtwoord om de portemonnee te openen.</translation>
     </message>
     <message>
         <source>Unlock wallet</source>
@@ -153,7 +153,7 @@
     </message>
     <message>
         <source>This operation needs your wallet passphrase to decrypt the wallet.</source>
-        <translation>Deze operatie vereist uw portemonneewachtwoord om de portemonnee te ontsleutelen</translation>
+        <translation>Deze operatie vereist uw portemonnee-wachtwoord om de portemonnee te ontsleutelen</translation>
     </message>
     <message>
         <source>Decrypt wallet</source>
@@ -165,7 +165,7 @@
     </message>
     <message>
         <source>Enter the old passphrase and new passphrase to the wallet.</source>
-        <translation>Voer het oude en nieuwe wachtwoord in voor uw portemonnee.</translation>
+        <translation>Voer het oude en nieuwe wachtwoord in van uw portemonnee.</translation>
     </message>
     <message>
         <source>Confirm wallet encryption</source>
@@ -201,7 +201,7 @@
     </message>
     <message>
         <source>The supplied passphrases do not match.</source>
-        <translation>De opgegeven wachtwoorden komen niet overeen</translation>
+        <translation>De opgegeven wachtwoorden komen niet overeen.</translation>
     </message>
     <message>
         <source>Wallet unlock failed</source>
@@ -213,11 +213,11 @@
     </message>
     <message>
         <source>Wallet decryption failed</source>
-        <translation>Portemonnee-ontsleuteling mislukt</translation>
+        <translation>Portemonnee-ontsleuteling is mislukt</translation>
     </message>
     <message>
         <source>Wallet passphrase was successfully changed.</source>
-        <translation>Portemonneewachtwoord is met succes gewijzigd.</translation>
+        <translation>Het portemonnee-wachtwoord is met succes gewijzigd.</translation>
     </message>
     <message>
         <source>Warning: The Caps Lock key is on!</source>
@@ -263,7 +263,7 @@
     </message>
     <message>
         <source>Browse transaction history</source>
-        <translation>Blader door transactiegescheidenis</translation>
+        <translation>Blader door de transactiegeschiedenis</translation>
     </message>
     <message>
         <source>E&amp;xit</source>
@@ -311,11 +311,11 @@
     </message>
     <message>
         <source>&amp;Sending addresses...</source>
-        <translation>&amp;Verstuuradressen...</translation>
+        <translation>&amp;Verstuur-adressen...</translation>
     </message>
     <message>
         <source>&amp;Receiving addresses...</source>
-        <translation>&amp;Ontvangstadressen...</translation>
+        <translation>&amp;Ontvangst-adressen...</translation>
     </message>
     <message>
         <source>Open &amp;URI...</source>
@@ -343,7 +343,7 @@
     </message>
     <message>
         <source>Send coins to a SHIELD address</source>
-        <translation>Verstuur munten naar een SHIELDadres</translation>
+        <translation>Verstuur munten naar een SHIELD-adres</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -351,7 +351,7 @@
     </message>
     <message>
         <source>Change the passphrase used for wallet encryption</source>
-        <translation>Wijzig het wachtwoord voor uw portemonneversleuteling</translation>
+        <translation>Wijzig het wachtwoord voor uw portemonnee-versleuteling</translation>
     </message>
     <message>
         <source>&amp;Debug window</source>
@@ -395,11 +395,11 @@
     </message>
     <message>
         <source>Sign messages with your SHIELD addresses to prove you own them</source>
-        <translation>Onderteken berichten met uw SHIELDadressen om te bewijzen dat u deze adressen bezit</translation>
+        <translation>Onderteken berichten met uw SHIELD-adressen om te bewijzen dat u deze adressen bezit</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified SHIELD addresses</source>
-        <translation>Verifiëer handtekeningen om zeker te zijn dat de berichten zijn ondertekend met de gespecificeerde SHIELDadressen</translation>
+        <translation>Controleer uw berichten om zeker te zijn ze zijn ondertekend met de gespecificeerde SHIELD-adressen</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -423,7 +423,7 @@
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
-        <translation>Toon de lijst met gebruikte verstuuradressen en -labels</translation>
+        <translation>Toon de lijst met gebruikte verzendadressen en -labels</translation>
     </message>
     <message>
         <source>Show the list of used receiving addresses and labels</source>
@@ -439,7 +439,10 @@
     </message>
     <message numerus="yes">
         <source>%n active connection(s) to SHIELD network</source>
-        <translation><numerusform>%n actieve verbinding met SHIELDnetwerk</numerusform><numerusform>%n actieve verbindingen met SHIELDnetwerk</numerusform></translation>
+        <translation>
+        <numerusform>%n actieve verbinding met SHIELD netwerk</numerusform>
+        <numerusform>%n actieve verbindingen met SHIELD netwerk</numerusform>
+        </translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -451,7 +454,10 @@
     </message>
     <message numerus="yes">
         <source>Processed %n block(s) of transaction history.</source>
-        <translation><numerusform>%n blok aan transactiegeschiedenis verwerkt.</numerusform><numerusform>%n blokken aan transactiegeschiedenis verwerkt.</numerusform></translation>
+        <translation>
+        <numerusform>%n blok(ken) aan transactiegeschiedenis verwerkt.</numerusform>
+        <numerusform>%n blok(ken) aan transactiegeschiedenis verwerkt.</numerusform>
+        </translation>
     </message>
     <message>
         <source>%1 behind</source>
@@ -459,7 +465,7 @@
     </message>
     <message>
         <source>Last received block was generated %1 ago.</source>
-        <translation>Laatst ontvangen blok was %1 geleden gegenereerd.</translation>
+        <translation>Het laatst ontvangen blok is %1 geleden gegenereerd.</translation>
     </message>
     <message>
         <source>Transactions after this will not yet be visible.</source>
@@ -491,7 +497,7 @@
     </message>
     <message>
         <source>Connecting to peers...</source>
-        <translation>Gelijke worden verbonden...</translation>
+        <translation>Verbinding maken met "peers"</translation>
     </message>
     <message>
         <source>Catching up...</source>
@@ -529,7 +535,7 @@
     </message>
     <message>
         <source>Sent transaction</source>
-        <translation>Verstuurde transactie</translation>
+        <translation>Verzonden transactie</translation>
     </message>
     <message>
         <source>Incoming transaction</source>
@@ -537,11 +543,11 @@
     </message>
     <message>
         <source>HD key generation is &lt;b&gt;enabled&lt;/b&gt;</source>
-        <translation>HD-sleutel voortbrenging is &lt;b&gt;ingeschakeld&lt;/b&gt;</translation>
+        <translation>HD-sleutel genereren is &lt;b&gt;ingeschakeld&lt;/b&gt;</translation>
     </message>
     <message>
         <source>HD key generation is &lt;b&gt;disabled&lt;/b&gt;</source>
-        <translation>HD-sleutel voortbrenging is &lt;b&gt;uitgeschakeld&lt;/b&gt;</translation>
+        <translation>HD-sleutel genereren is &lt;b&gt;uitgeschakeld&lt;/b&gt;</translation>
     </message>
     <message>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
@@ -553,7 +559,7 @@
     </message>
     <message>
         <source>A fatal error occurred. SHIELD can no longer continue safely and will quit.</source>
-        <translation>Een fatale fout heeft zich voorgedaan. SHIELD kan niet veilig worden verdergezet en wordt afgesloten.</translation>
+        <translation>Een fatale fout heeft zich voorgedaan. SHIELD kan niet veilig blijven werken en wordt afgesloten.</translation>
     </message>
 </context>
 <context>
@@ -564,7 +570,7 @@
     </message>
     <message>
         <source>Quantity:</source>
-        <translation>Kwantiteit</translation>
+        <translation>Hoeveelheid:</translation>
     </message>
     <message>
         <source>Bytes:</source>
@@ -584,7 +590,7 @@
     </message>
     <message>
         <source>After Fee:</source>
-        <translation>Naheffing:</translation>
+        <translation>Na transactiekosten:</translation>
     </message>
     <message>
         <source>Change:</source>
@@ -656,11 +662,11 @@
     </message>
     <message>
         <source>Copy fee</source>
-        <translation>Kopieer vergoeding</translation>
+        <translation>Kopieer transactiekosten</translation>
     </message>
     <message>
         <source>Copy after fee</source>
-        <translation>Kopieer na vergoeding</translation>
+        <translation>Kopieer na transactiekosten</translation>
     </message>
     <message>
         <source>Copy bytes</source>
@@ -688,7 +694,7 @@
     </message>
     <message>
         <source>This label turns red if any recipient receives an amount smaller than the current dust threshold.</source>
-        <translation>Dit label wordt rood, als een ontvanger een bedrag van minder dan de huidige dust-drempel gekregen heeft.</translation>
+        <translation>Dit label wordt rood, als een ontvanger een bedrag van minder dan de huidige stof-drempel gekregen heeft.</translation>
     </message>
     <message>
         <source>Can vary +/- %1 satoshi(s) per input.</source>
@@ -723,7 +729,7 @@
     </message>
     <message>
         <source>The address associated with this address list entry. This can only be modified for sending addresses.</source>
-        <translation>Het adres dat bij dit adresitem hoort. Dit kan alleen bewerkt worden voor verstuuradressen.</translation>
+        <translation>Het adres dat bij dit adresitem hoort. Dit kan alleen bewerkt worden voor verzendadressen.</translation>
     </message>
     <message>
         <source>&amp;Address</source>
@@ -747,7 +753,7 @@
     </message>
     <message>
         <source>The entered address "%1" is not a valid SHIELD address.</source>
-        <translation>Het opgegeven adres "%1" is een ongeldig SHIELDadres.</translation>
+        <translation>Het opgegeven adres "%1" is een ongeldig SHIELD-adres.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -778,7 +784,7 @@
     </message>
     <message>
         <source>Path already exists, and is not a directory.</source>
-        <translation>Pad bestaat al en is geen map.</translation>
+        <translation>Het pad bestaat al en is geen map.</translation>
     </message>
     <message>
         <source>Cannot create data directory here.</source>
@@ -856,7 +862,7 @@
     </message>
     <message>
         <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2GB) starting with the earliest transactions in %3 when %4 initially launched.</source>
-        <translation>Als u op OK klikt, dan zal %1 beginnen met downloaden en verwerken van de volledige %4 blokketen (%2GB) startend met de eerste transacties in %3 toen %4 initeel werd gestart.</translation>
+        <translation>Als u op OK klikt, dan zal %1 beginnen met downloaden en verwerken van de volledige %4 block chain (%2GB) startend met de eerste transacties in %3 toen %4 initeel werd gestart.</translation>
     </message>
     <message>
         <source>This initial synchronisation is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
@@ -880,7 +886,7 @@
     </message>
     <message>
         <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
-        <translation>Tenminste %1 GB aan data zal worden opgeslagen in deze map, en dit zal naarmate de tijd voortschrijdt groeien.</translation>
+        <translation>Tenminste %1 GB aan data zal worden opgeslagen in deze map, en de omvang hiervan neemt op den duur toe.</translation>
     </message>
     <message>
         <source>Approximately %1 GB of data will be stored in this directory.</source>
@@ -888,7 +894,7 @@
     </message>
     <message>
         <source>%1 will download and store a copy of the SHIELD block chain.</source>
-        <translation>%1 zal een kopie van de blokketen van SHIELD downloaden en opslaan.</translation>
+        <translation>%1 zal een kopie van de block chain van SHIELD downloaden en opslaan.</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -896,7 +902,7 @@
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
-        <translation>Fout: De gespecificeerde map "%1" kan niet worden gecreëerd.</translation>
+        <translation>Fout: De gespecificeerde map "%1" kan niet worden aangemaakt.</translation>
     </message>
     <message>
         <source>Error</source>
@@ -904,11 +910,17 @@
     </message>
     <message numerus="yes">
         <source>%n GB of free space available</source>
-        <translation><numerusform>%n GB aan vrije opslagruimte beschikbaar</numerusform><numerusform>%n GB aan vrije opslagruimte beschikbaar</numerusform></translation>
+        <translation>
+        <numerusform>%n GB aan vrije opslagruimte beschikbaar</numerusform>
+        <numerusform>%n GB aan vrije opslagruimte beschikbaar</numerusform>
+        </translation>
     </message>
     <message numerus="yes">
         <source>(of %n GB needed)</source>
-        <translation><numerusform>(van %n GB nodig)</numerusform><numerusform>(van %n GB nodig)</numerusform></translation>
+        <translation>
+        <numerusform>(van %n GB nodig)</numerusform>
+        <numerusform>(van %n GB nodig)</numerusform>
+        </translation>
     </message>
 </context>
 <context>
@@ -919,15 +931,15 @@
     </message>
     <message>
         <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the SHIELD network, as detailed below.</source>
-        <translation>Recente transacties zijn mogelijk nog niet zichtbaar. De balans van de geldbeugel is daarom mogelijk niet correct. Deze informatie is correct van zodra de synchronisatie met het shield-netwerk werd voltooid, zoals onderaan beschreven.</translation>
+        <translation>Recente transacties zijn mogelijk nog niet zichtbaar. Het saldo van de portemonnee is daarom mogelijk niet correct. De informatie is pas correct na synchronisatie met het SHIELD-netwerk, waarvan u de voortgang onderstaand kunt zien.</translation>
     </message>
     <message>
         <source>Attempting to spend SHIELD that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation>Poging om SHIELD te besteden die door "nog niet weergegeven" transacties worden beïnvloed, worden niet door het netwerk geaccepteerd.</translation>
+        <translation>Pogingen om SHIELD te besteden die door "nog niet weergegeven" transacties worden beïnvloedt, worden niet door het netwerk geaccepteerd.</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
-        <translation>Aantal blokken resterend.</translation>
+        <translation>Aantal blokken resterend:</translation>
     </message>
     <message>
         <source>Unknown...</source>
@@ -935,15 +947,15 @@
     </message>
     <message>
         <source>Last block time</source>
-        <translation>Tijd laatste blok</translation>
+        <translation>Tijd laatste blok:</translation>
     </message>
     <message>
         <source>Progress</source>
-        <translation>Vooruitgang</translation>
+        <translation>Voortgang:</translation>
     </message>
     <message>
         <source>Progress increase per hour</source>
-        <translation>Vooruitgang per uur</translation>
+        <translation>Voortgang per uur:</translation>
     </message>
     <message>
         <source>calculating...</source>
@@ -951,7 +963,7 @@
     </message>
     <message>
         <source>Estimated time left until synced</source>
-        <translation>Geschatte tijd tot volledig synchroon</translation>
+        <translation>Geschatte tijd tot volledig gesynchroniseerd:</translation>
     </message>
     <message>
         <source>Hide</source>
@@ -1065,7 +1077,7 @@
     </message>
     <message>
         <source>(0 = auto, &lt;0 = leave that many cores free)</source>
-        <translation>(0 = auto, &lt;0 = laat dit aantal kernen vrij)</translation>
+        <translation>(0 = auto, &lt;0 = laat dit aantal kernen (cores) vrij)</translation>
     </message>
     <message>
         <source>W&amp;allet</source>
@@ -1089,7 +1101,7 @@
     </message>
     <message>
         <source>Automatically open the SHIELD client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Open de SHIELDpoort automatisch op de router. Dit werkt alleen als de router UPnP ondersteunt en het aanstaat.</translation>
+        <translation>Open de SHIELD poort automatisch op de router. Dit werkt alleen als de router UPnP ondersteunt en het aanstaat.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1105,7 +1117,7 @@
     </message>
     <message>
         <source>Connect to the SHIELD network through a SOCKS5 proxy.</source>
-        <translation>Verbind met het SHIELDnetwerk via een SOCKS5 proxy.</translation>
+        <translation>Verbind met het SHIELD-netwerk via een SOCKS5 proxy.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1141,7 +1153,7 @@
     </message>
     <message>
         <source>Connect to the SHIELD network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Maak verbinding met SHIELDnetwerk door een aparte SOCKS5-proxy voor verborgen diensten van Tor.</translation>
+        <translation>Maak verbinding met SHIELD-netwerk door een aparte SOCKS5-proxy voor verborgen diensten van Tor.</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -1169,7 +1181,7 @@
     </message>
     <message>
         <source>The user interface language can be set here. This setting will take effect after restarting %1.</source>
-        <translation>De taal van de gebruikersinterface kan hier ingesteld worden. Deze instelling zal pas van kracht worden nadat %1 herstart wordt.</translation>
+        <translation>De taal van de gebruikersinterface kan hier ingesteld worden. Deze instelling wordt pas van kracht nadat %1 herstart wordt.</translation>
     </message>
     <message>
         <source>&amp;Unit to show amounts in:</source>
@@ -1177,7 +1189,7 @@
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Kies de standaardonderverdelingseenheid om weer te geven in uw programma, en voor het versturen van munten</translation>
+        <translation>Kies de standaardonderverdelingseenheid om weer te geven in uw programma, en voor het verzenden van munten</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1221,7 +1233,7 @@
     </message>
     <message>
         <source>The configuration file is used to specify advanced user options which override GUI settings. Additionally, any command-line options will override this configuration file.</source>
-        <translation>Het bevestigingsbestand wordt gebruikt om geavanceerde gebruikersopties te specificeren welke de GUI instellingen overschrijd. Daarnaast, zullen alle command-line opties dit configuratiebestand overschrijven.</translation>
+        <translation>Het bevestigingsbestand wordt gebruikt om geavanceerde gebruikersopties te specificeren die de GUI instellingen overschrijven. Daarnaast, zullen alle command-line opties dit configuratiebestand overschrijven.</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1229,7 +1241,7 @@
     </message>
     <message>
         <source>The configuration file could not be opened.</source>
-        <translation>Het configuratiebestand kon niet worden geopend.</translation>
+        <translation>Het configuratiebestand kan niet worden geopend.</translation>
     </message>
     <message>
         <source>This change would require a client restart.</source>
@@ -1248,7 +1260,7 @@
     </message>
     <message>
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the SHIELD network after a connection is established, but this process has not completed yet.</source>
-        <translation>De weergegeven informatie kan verouderd zijn. Uw portemonnee synchroniseert automatisch met het SHIELDnetwerk nadat een verbinding is gelegd, maar dit proces is nog niet voltooid.</translation>
+        <translation>De weergegeven informatie kan verouderd zijn. Uw portemonnee synchroniseert automatisch met het SHIELD-netwerk nadat een verbinding is gelegd, maar dit proces is nog niet voltooid.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1264,7 +1276,7 @@
     </message>
     <message>
         <source>Pending:</source>
-        <translation>Afwachtend:</translation>
+        <translation>In behandeling:</translation>
     </message>
     <message>
         <source>Total of transactions that have yet to be confirmed, and do not yet count toward the spendable balance</source>
@@ -1272,7 +1284,7 @@
     </message>
     <message>
         <source>Immature:</source>
-        <translation>Immatuur:</translation>
+        <translation>Onvolwassen:</translation>
     </message>
     <message>
         <source>Mined balance that has not yet matured</source>
@@ -1441,7 +1453,7 @@
     </message>
     <message>
         <source>Enter a SHIELD address (e.g. %1)</source>
-        <translation>Voer een SHIELDadres in (bijv. %1)</translation>
+        <translation>Voer een SHIELD-adres in (bijv. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1473,23 +1485,38 @@
     </message>
     <message numerus="yes">
         <source>%n second(s)</source>
-        <translation><numerusform>%n seconde</numerusform><numerusform>%n seconden</numerusform></translation>
+        <translation>
+        <numerusform>%n seconde</numerusform>
+        <numerusform>%n seconden</numerusform>
+        </translation>
     </message>
     <message numerus="yes">
         <source>%n minute(s)</source>
-        <translation><numerusform>%n minuut</numerusform><numerusform>%n minuten</numerusform></translation>
+        <translation>
+        <numerusform>%n minuut</numerusform>
+        <numerusform>%n minuten</numerusform>
+        </translation>
     </message>
     <message numerus="yes">
         <source>%n hour(s)</source>
-        <translation><numerusform>%n uur</numerusform><numerusform>%n uren</numerusform></translation>
+        <translation>
+        <numerusform>%n uur</numerusform>
+        <numerusform>%n uren</numerusform>
+        </translation>
     </message>
     <message numerus="yes">
         <source>%n day(s)</source>
-        <translation><numerusform>%n dag</numerusform><numerusform>%n dagen</numerusform></translation>
+        <translation>
+        <numerusform>%n dag</numerusform>
+        <numerusform>%n dagen</numerusform>
+        </translation>
     </message>
     <message numerus="yes">
         <source>%n week(s)</source>
-        <translation><numerusform>%n week</numerusform><numerusform>%n weken</numerusform></translation>
+        <translation>
+        <numerusform>%n week</numerusform>
+        <numerusform>%n weken</numerusform>
+        </translation>
     </message>
     <message>
         <source>%1 and %2</source>
@@ -1497,7 +1524,10 @@
     </message>
     <message numerus="yes">
         <source>%n year(s)</source>
-        <translation><numerusform>%n jaar</numerusform><numerusform>%n jaren</numerusform></translation>
+        <translation>
+        <numerusform>%n jaar</numerusform>
+        <numerusform>%n jaren</numerusform>
+        </translation>
     </message>
     <message>
         <source>%1 B</source>
@@ -1606,7 +1636,7 @@
     </message>
     <message>
         <source>Block chain</source>
-        <translation>Blokketen</translation>
+        <translation>Blokketen (block chain)</translation>
     </message>
     <message>
         <source>Current number of blocks</source>
@@ -1682,11 +1712,11 @@
     </message>
     <message>
         <source>Decrease font size</source>
-        <translation>Verklein lettergrootte</translation>
+        <translation>Verklein de lettergrootte</translation>
     </message>
     <message>
         <source>Increase font size</source>
-        <translation>Vergroot lettergrootte</translation>
+        <translation>Vergroot de lettergrootte</translation>
     </message>
     <message>
         <source>Services</source>
@@ -1857,7 +1887,7 @@
     </message>
     <message>
         <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the SHIELD network.</source>
-        <translation>Een optioneel bericht om bij te voegen aan het betalingsverzoek, welke zal getoond worden wanneer het verzoek is geopend. Opmerking: Het bericht zal niet worden verzonden met de betaling over het SHIELDnetwerk.</translation>
+        <translation>Een optioneel bericht om bij te voegen aan het betalingsverzoek, dat getoond wordt wanneer het verzoek is geopend. Opmerking: Het bericht zal niet worden verzonden met de betaling over het SHIELD-netwerk.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2030,11 +2060,11 @@
     </message>
     <message>
         <source>Insufficient funds!</source>
-        <translation>Onvoldoende fonds!</translation>
+        <translation>Onvoldoende saldo!</translation>
     </message>
     <message>
         <source>Quantity:</source>
-        <translation>Kwantiteit</translation>
+        <translation>Hoeveelheid:</translation>
     </message>
     <message>
         <source>Bytes:</source>
@@ -2046,11 +2076,11 @@
     </message>
     <message>
         <source>Fee:</source>
-        <translation>Kosten:</translation>
+        <translation>transactiekosten:</translation>
     </message>
     <message>
         <source>After Fee:</source>
-        <translation>Naheffing:</translation>
+        <translation>Na transactiekosten:</translation>
     </message>
     <message>
         <source>Change:</source>
@@ -2074,15 +2104,15 @@
     </message>
     <message>
         <source>Using the fallbackfee can result in sending a transaction that will take several hours or days (or never) to confirm. Consider choosing your fee manually or wait until you have validated the complete chain.</source>
-        <translation>Gebruik van de terugvalkosten kan resulteren in het verzenden van een transactie die meerdere uren of dagen (of nooit) zal duren om bevestigd te worden. Overweeg om handmatig de kosten in te geven of wacht totdat je de volledige keten hebt gevalideerd.</translation>
+        <translation>Gebruik van de terugvaltransactie kosten kan er toe leiden dat het verzenden van een transactie pas na meerdere uren of dagen (of nooit) wordt bevestigd. Overweeg om handmatig de transactiekosten in te geven of wacht totdat je de volledige keten hebt gevalideerd.</translation>
     </message>
     <message>
         <source>Warning: Fee estimation is currently not possible.</source>
-        <translation>Waarschuwing: Schatting van de kosten is momenteel niet mogelijk.</translation>
+        <translation>Waarschuwing: Schatting van de transactiekosten is momenteel niet mogelijk.</translation>
     </message>
     <message>
         <source>collapse fee-settings</source>
-        <translation>verberg kosteninstellingen</translation>
+        <translation>verberg transactiekosteninstellingen</translation>
     </message>
     <message>
         <source>per kilobyte</source>
@@ -2090,7 +2120,7 @@
     </message>
     <message>
         <source>If the custom fee is set to 1000 satoshis and the transaction is only 250 bytes, then "per kilobyte" only pays 250 satoshis in fee, while "total at least" pays 1000 satoshis. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Als de aangepaste toeslag is ingesteld op 1000 satoshis en de transactie is maar 250 bytes, dan wordt bij "per kilobyte" 250 satoshis aan toeslag berekend, terwijl er bij "totaal tenminste" 1000 satoshis worden berekend. Voor transacties die groter zijn dan een kilobyte, wordt in beide gevallen per kilobyte de toeslag berekend.</translation>
+        <translation>Als de aangepaste transactiekosten zijn ingesteld op 1000 satoshis en de transactie is maar 250 bytes, dan wordt bij "per kilobyte" 250 satoshis aan toeslag berekend, terwijl er bij "totaal tenminste" 1000 satoshis worden berekend. Voor transacties die groter zijn dan een kilobyte, wordt in beide gevallen per kilobyte de toeslag berekend.</translation>
     </message>
     <message>
         <source>Hide</source>
@@ -2098,7 +2128,7 @@
     </message>
     <message>
         <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for SHIELD transactions than the network can process.</source>
-        <translation>De minimale toeslag betalen is prima mits het transactievolume kleiner is dan de ruimte in de blokken. Let wel op dat dit tot gevolg kan hebben dat een transactie nooit wordt bevestigd als er meer vraag is naar shieldtransacties dan het netwerk kan verwerken.</translation>
+        <translation>De minimale transactiekosten betalen is prima mits het transactievolume kleiner is dan de ruimte in de blokken. Let wel op dat dit tot gevolg kan hebben dat een transactie nooit wordt bevestigd als er meer vraag is naar SHIELD-transacties dan het netwerk kan verwerken.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -2118,7 +2148,7 @@
     </message>
     <message>
         <source>Send to multiple recipients at once</source>
-        <translation>Verstuur in een keer aan verschillende ontvangers</translation>
+        <translation>Verstuur in één keer aan verschillende ontvangers</translation>
     </message>
     <message>
         <source>Add &amp;Recipient</source>
@@ -2162,7 +2192,7 @@
     </message>
     <message>
         <source>Copy fee</source>
-        <translation>Kopieer vergoeding</translation>
+        <translation>Kopieer transactievergoeding</translation>
     </message>
     <message>
         <source>Copy after fee</source>
@@ -2238,7 +2268,7 @@
     </message>
     <message>
         <source>A fee higher than %1 is considered an absurdly high fee.</source>
-        <translation>Een vergoeding van meer dan %1 wordt beschouwd als een absurd hoge vergoeding.</translation>
+        <translation>Een transactievergoeding van meer dan %1 wordt beschouwd als een absurd hoge vergoeding.</translation>
     </message>
     <message>
         <source>Payment request expired.</source>
@@ -2250,11 +2280,14 @@
     </message>
     <message numerus="yes">
         <source>Estimated to begin confirmation within %n block(s).</source>
-        <translation><numerusform>Schatting is dat bevestiging begint over %n blok.</numerusform><numerusform>Schatting is dat bevestiging begint over %n blokken.</numerusform></translation>
+        <translation>
+        <numerusform>Schatting is dat de bevestiging begint over %n blok.</numerusform>
+        <numerusform>Schatting is dat de bevestiging begint over %n blokken.</numerusform>
+        </translation>
     </message>
     <message>
         <source>Warning: Invalid SHIELD address</source>
-        <translation>Waarschuwing: Ongeldig SHIELDadres</translation>
+        <translation>Waarschuwing: Ongeldig SHIELD-adres</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2266,7 +2299,7 @@
     </message>
     <message>
         <source>The address you selected for change is not part of this wallet. Any or all funds in your wallet may be sent to this address. Are you sure?</source>
-        <translation>Het wisselgeldadres dat u heeft geselecteerd maakt geen deel uit van deze portemonnee. Een deel of zelfs alle geld in uw portemonnee kan mogelijk naar dit adres worden verzonden. Weet je het zeker?</translation>
+        <translation>Het wisselgeldadres dat u heeft geselecteerd maakt geen deel uit van deze portemonnee. Een deel of zelfs het hele saldo in uw portemonnee kan mogelijk naar dit adres worden verzonden. Weet u het zeker?</translation>
     </message>
     <message>
         <source>(no label)</source>
@@ -2297,7 +2330,7 @@
     </message>
     <message>
         <source>The SHIELD address to send the payment to</source>
-        <translation>Het SHIELDadres om betaling aan te versturen</translation>
+        <translation>Het SHIELD-adres om betaling aan te versturen</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2386,11 +2419,11 @@
     </message>
     <message>
         <source>You can sign messages/agreements with your addresses to prove you can receive SHIELD sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>U kunt berichten/overeenkomsten ondertekenen met uw adres om te bewijzen dat u SHIELDs kunt versturen. Wees voorzichtig met het ondertekenen van iets vaags of willekeurigs, omdat phishingaanvallen u kunnen proberen te misleiden tot het ondertekenen van overeenkomsten om uw identiteit aan hen toe te vertrouwen. Onderteken alleen volledig gedetailleerde verklaringen voordat u akkoord gaat.</translation>
+        <translation>U kunt berichten/overeenkomsten ondertekenen met uw adres om te bewijzen dat u SHIELD kunt versturen. Wees voorzichtig met het ondertekenen van iets vaags of willekeurigs, omdat phishingaanvallen u kunnen proberen te misleiden tot het ondertekenen van overeenkomsten om uw identiteit aan hen toe te vertrouwen. Onderteken alleen volledig gedetailleerde verklaringen voordat u akkoord gaat.</translation>
     </message>
     <message>
         <source>The SHIELD address to sign the message with</source>
-        <translation>Het SHIELDadres om bericht mee te ondertekenen</translation>
+        <translation>Het SHIELD adres om het bericht mee te ondertekenen</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2402,7 +2435,7 @@
     </message>
     <message>
         <source>Paste address from clipboard</source>
-        <translation>Plak adres vanuit klembord</translation>
+        <translation>Plak het adres vanuit het klembord</translation>
     </message>
     <message>
         <source>Alt+P</source>
@@ -2422,7 +2455,7 @@
     </message>
     <message>
         <source>Sign the message to prove you own this SHIELD address</source>
-        <translation>Onderteken een bericht om te bewijzen dat u een bepaald SHIELDadres bezit</translation>
+        <translation>Onderteken een bericht om te bewijzen dat u een bepaald SHIELD adres bezit</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2442,15 +2475,15 @@
     </message>
     <message>
         <source>Enter the receiver's address, message (ensure you copy line breaks, spaces, tabs, etc. exactly) and signature below to verify the message. Be careful not to read more into the signature than what is in the signed message itself, to avoid being tricked by a man-in-the-middle attack. Note that this only proves the signing party receives with the address, it cannot prove sendership of any transaction!</source>
-        <translation>Voer het adres van de ontvanger in, bericht (zorg ervoor dat de regeleinden, spaties, tabs etc. precies kloppen) en onderteken onderaan om het bericht te verifiëren. Wees voorzicht om niet meer in de ondertekening te lezen dan in het getekende bericht zelf, om te voorkomen dat je wordt aangevallen met een man-in-the-middle attack. Houd er mee rekening dat dit alleen de ondertekende partij bewijst met het ontvangen adres, er kan niet bewezen worden dat er een transactie heeft plaatsgevonden!</translation>
+        <translation>Voer het adres van de ontvanger in en uw bericht (zorg ervoor dat de regeleinden, spaties, tabs etc. precies kloppen) en onderteken onderaan om het bericht te verifiëren. Wees voorzicht om niet meer in de ondertekening te lezen dan in het getekende bericht zelf, om te voorkomen dat je wordt aangevallen met een man-in-the-middle attack. Houd er mee rekening dat dit alleen de ondertekende partij bewijst met het ontvangen adres, er kan niet bewezen worden dat er een transactie heeft plaatsgevonden!</translation>
     </message>
     <message>
         <source>The SHIELD address the message was signed with</source>
-        <translation>Het SHIELDadres waarmee het bericht ondertekend is</translation>
+        <translation>Het SHIELD-adres waarmee het bericht ondertekend is</translation>
     </message>
     <message>
         <source>Verify the message to ensure it was signed with the specified SHIELD address</source>
-        <translation>Controleer een bericht om te verifiëren dat het gespecificeerde SHIELDadres het bericht heeft ondertekend.</translation>
+        <translation>Controleer het bericht om vast te stellen dat het juiste SHIELD adres het bericht heeft ondertekend.</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2531,7 +2564,10 @@
     <name>TransactionDesc</name>
     <message numerus="yes">
         <source>Open for %n more block(s)</source>
-        <translation><numerusform>Open voor nog %n blok</numerusform><numerusform>Open voor nog %n blokken</numerusform></translation>
+        <translation>
+        <numerusform>Open voor nog %n blok</numerusform>
+        <numerusform>Open voor nog %n blokken</numerusform>
+        </translation>
     </message>
     <message>
         <source>Open until %1</source>
@@ -2619,7 +2655,10 @@
     </message>
     <message numerus="yes">
         <source>matures in %n more block(s)</source>
-        <translation><numerusform>komt beschikbaar na %n nieuwe blok</numerusform><numerusform>komt beschikbaar na %n nieuwe blokken</numerusform></translation>
+        <translation>
+        <numerusform>komt beschikbaar na %n nieuwe blok</numerusform>
+        <numerusform>komt beschikbaar na %n nieuwe blokken</numerusform>
+        </translation>
     </message>
     <message>
         <source>not accepted</source>
@@ -2671,7 +2710,7 @@
     </message>
     <message>
         <source>Generated coins must mature %1 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to "not accepted" and it won't be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>Gegenereerde munten moeten %1 blokken rijpen voordat ze kunnen worden besteed. Toen dit blok gegenereerd werd, werd het uitgezonden naar het netwerk om aan de blokketen toegevoegd te worden. Als het niet lukt om in de keten toegevoegd te worden, zal de status te veranderen naar "niet geaccepteerd" en zal het niet besteedbaar zijn. Dit kan soms gebeuren als een ander knooppunt een blok genereert binnen een paar seconden na die van u.</translation>
+        <translation>Gegenereerde munten moeten %1 blokken rijpen voordat ze kunnen worden besteed. Toen dit blok gegenereerd werd, werd het naar het netwerk gezonden om aan de blockchain toegevoegd te worden. Als het niet lukt om aan de blockchain toegevoegd te worden, veranderd de status naar "niet geaccepteerd" en zal het niet besteedbaar zijn. Dit kan soms gebeuren als een ander knooppunt een blok genereert binnen een paar seconden na die van u.</translation>
     </message>
     <message>
         <source>Debug information</source>
@@ -2725,7 +2764,10 @@
     </message>
     <message numerus="yes">
         <source>Open for %n more block(s)</source>
-        <translation><numerusform>Open voor nog %n blok</numerusform><numerusform>Open voor nog %n blokken</numerusform></translation>
+        <translation>
+        <numerusform>Open voor nog %n blok</numerusform>
+        <numerusform>Open voor nog %n blokken</numerusform>
+        </translation>
     </message>
     <message>
         <source>Open until %1</source>
@@ -2876,7 +2918,7 @@
     </message>
     <message>
         <source>Enter address, transaction id, or label to search</source>
-        <translation>Voer adres, transactie-ID of etiket in om te zoeken</translation>
+        <translation>Voer adres, transactie-ID of label in om te zoeken</translation>
     </message>
     <message>
         <source>Min amount</source>
@@ -2912,7 +2954,7 @@
     </message>
     <message>
         <source>Copy full transaction details</source>
-        <translation>Kopieer volledige transactiedetials</translation>
+        <translation>Kopieer volledige transactiedetails</translation>
     </message>
     <message>
         <source>Edit label</source>
@@ -3207,7 +3249,7 @@
     </message>
     <message>
         <source>Reduce storage requirements by enabling pruning (deleting) of old blocks. This allows the pruneblockchain RPC to be called to delete specific blocks, and enables automatic pruning of old blocks if a target size in MiB is provided. This mode is incompatible with -txindex and -rescan. Warning: Reverting this setting requires re-downloading the entire blockchain. (default: 0 = disable pruning blocks, 1 = allow manual pruning via RPC, &gt;%u = automatically prune block files to stay under the specified target size in MiB)</source>
-        <translation>Beperk benodigde opslag door het prunen (verwijderen) van oude blocks in te schakelen. Dit maakt het mogelijk om het pruneblockchain RPC commando aan te roepen om specifieke blocks te verwijderen, en maakt het automatische prunen van oude blocks mogelijk wanneer een doelgrootte in MiB is ingesteld. Deze modus is niet compatible met -txindex en -rescan. Waarschuwing: ongedaan maken van deze instellingen vereist het opnieuw downloaden van gehele de blockchain. (standaard:0 = uitschakelen prunen, 1 = handmatig prunen via RPC toestaan, &gt;%u = automatisch blockchain bestanden prunen om beneden de gespecificeerde doelgrootte in MiB te blijven)</translation>
+        <translation>Beperk de benodigde opslag door het prunen (verwijderen) van oude blocks in te schakelen. Dit maakt het mogelijk om het pruneblockchain RPC commando aan te roepen om specifieke blocks te verwijderen, en maakt het automatische prunen van oude blocks mogelijk wanneer een doelgrootte in MiB is ingesteld. Deze modus is niet compatible met -txindex en -rescan. Waarschuwing: ongedaan maken van deze instellingen vereist het opnieuw downloaden van gehele de blockchain. (standaard:0 = uitschakelen prunen, 1 = handmatig prunen via RPC toestaan, &gt;%u = automatisch blockchain bestanden prunen om beneden de gespecificeerde doelgrootte in MiB te blijven)</translation>
     </message>
     <message>
         <source>Set lowest fee rate (in %s/kB) for transactions to be included in block creation. (default: %s)</source>
@@ -3219,7 +3261,7 @@
     </message>
     <message>
         <source>The block database contains a block which appears to be from the future. This may be due to your computer's date and time being set incorrectly. Only rebuild the block database if you are sure that your computer's date and time are correct</source>
-        <translation>De blokdatabase bevat een blok dat lijkt uit de toekomst te komen. Dit kan gebeuren omdat de datum en tijd van uw computer niet goed staat. Herbouw de blokdatabase pas nadat u de datum en tijd van uw computer correct heeft ingesteld.</translation>
+        <translation>De blokdatabase bevat een blok dat uit de toekomst lijkt te komen. Dit kan gebeuren omdat de datum en tijd van uw computer niet goed staan. Herbouw de blokdatabase pas nadat u de datum en tijd van uw computer correct heeft ingesteld.</translation>
     </message>
     <message>
         <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
@@ -3227,7 +3269,7 @@
     </message>
     <message>
         <source>This is the transaction fee you may discard if change is smaller than dust at this level</source>
-        <translation>Dit zijn de transactiekost die u mag afleggen als het wisselgeld kleiner is dan het stof op dit niveau</translation>
+        <translation>Dit zijn de transactiekosten die u mag afleggen als het wisselgeld kleiner is dan het stof op dit niveau</translation>
     </message>
     <message>
         <source>Unable to replay blocks. You will need to rebuild the database using -reindex-chainstate.</source>
@@ -3539,7 +3581,7 @@
     </message>
     <message>
         <source>Bind to given address and whitelist peers connecting to it. Use [host]:port notation for IPv6</source>
-        <translation>Bind aan opgegeven adres en keur peers die ermee verbinden goed. Gebruik [host]:poort notatie voor IPv6</translation>
+        <translation>Verbind met opgegeven adres en keur peers die ermee verbinden goed. Gebruik [host]:poort notatie voor IPv6</translation>
     </message>
     <message>
         <source>Create new files with system default permissions, instead of umask 077 (only effective with disabled wallet functionality)</source>
@@ -3559,7 +3601,7 @@
     </message>
     <message>
         <source>Fees (in %s/kB) smaller than this are considered zero fee for relaying, mining and transaction creation (default: %s)</source>
-        <translation>Transactiekosten (in %s/kB) kleiner dan dit worden beschouw dat geen transactiekosten in rekening worden gebracht voor doorgeven, mijnen en transactiecreatie (standaard: %s)</translation>
+        <translation>Transactiekosten (in %s/kB) kleiner dan dit worden beschouwd als nul transactiekosten voor doorgeven, mijnen en transactiecreatie (standaard: %s)</translation>
     </message>
     <message>
         <source>If paytxfee is not set, include enough fee so transactions begin confirmation on average within n blocks (default: %u)</source>
@@ -3571,7 +3613,7 @@
     </message>
     <message>
         <source>Maximum size of data in data carrier transactions we relay and mine (default: %u)</source>
-        <translation>Maximale grootte va  n de gegevens in gegevensdragertransacties die we doorgeven en mijnen (standaard: %u)</translation>
+        <translation>Maximale grootte van de gegevens in gegevensdragertransacties die we doorgeven en mijnen (standaard: %u)</translation>
     </message>
     <message>
         <source>Randomize credentials for every proxy connection. This enables Tor stream isolation (default: %u)</source>
@@ -3699,7 +3741,7 @@
     </message>
     <message>
         <source>Transaction amount too small</source>
-        <translation>Transactiebedrag te klein</translation>
+        <translation>Het transactiebedrag is te klein</translation>
     </message>
     <message>
         <source>Transaction too large for fee policy</source>
@@ -3707,7 +3749,7 @@
     </message>
     <message>
         <source>Transaction too large</source>
-        <translation>Transactie te groot</translation>
+        <translation>De transactie is te groot</translation>
     </message>
     <message>
         <source>Unable to bind to %s on this computer (bind returned error %s)</source>
@@ -3779,7 +3821,7 @@
     </message>
     <message>
         <source>Bind to given address to listen for JSON-RPC connections. This option is ignored unless -rpcallowip is also passed. Port is optional and overrides -rpcport. Use [host]:port notation for IPv6. This option can be specified multiple times (default: 127.0.0.1 and ::1 i.e., localhost, or if -rpcallowip has been specified, 0.0.0.0 and :: i.e., all addresses)</source>
-        <translation>Bind aan gegeven adres om te luisteren voorJSON-RPC verbindingen. Deze optie zal genegeerd worden tenzij -rpcallowip ook aangegeven word. Port is optioneel en overschrijft -rpcport. Gebruik [host]:poort notatie voor IPv6. Deze optie van meerdere keren gebruikt worden (standaard: 127.0.0.1 en ::1 i.e., localhost, of als -rpcallowip gespecificeerd is, 0.0.0.0 en :: i.e., alle adressen)</translation>
+        <translation>Verbind met gegeven adres om te luisteren voorJSON-RPC verbindingen. Deze optie zal genegeerd worden tenzij -rpcallowip ook aangegeven word. Port is optioneel en overschrijft -rpcport. Gebruik [host]:poort notatie voor IPv6. Deze optie van meerdere keren gebruikt worden (standaard: 127.0.0.1 en ::1 i.e., localhost, of als -rpcallowip gespecificeerd is, 0.0.0.0 en :: i.e., alle adressen)</translation>
     </message>
     <message>
         <source>Do not keep transactions in the mempool longer than &lt;n&gt; hours (default: %u)</source>
@@ -3787,7 +3829,7 @@
     </message>
     <message>
         <source>Equivalent bytes per sigop in transactions for relay and mining (default: %u)</source>
-        <translation>Equivalent byter per sigop in transactions voor doorsturen en mijnen (standaard: %u)</translation>
+        <translation>Equivalent bytes per sigop in transactions voor doorsturen en mijnen (standaard: %u)</translation>
     </message>
     <message>
         <source>Error loading %s: You can't enable HD on an already existing non-HD wallet</source>
@@ -3831,7 +3873,7 @@
     </message>
     <message>
         <source>This is the transaction fee you may pay when fee estimates are not available.</source>
-        <translation>Dit is de transactiekost die je mogelijk betaald indien geschatte tarief niet beschikbaar is</translation>
+        <translation>Dit zijn de transactiekosten die je mogelijk betaald indien geschatte tarief niet beschikbaar is</translation>
     </message>
     <message>
         <source>This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit %s and cryptographic software written by Eric Young and UPnP software written by Thomas Bernard.</source>
@@ -3863,7 +3905,7 @@
     </message>
     <message>
         <source>Warning: Wallet file corrupt, data salvaged! Original %s saved as %s in %s; if your balance or transactions are incorrect you should restore from a backup.</source>
-        <translation>Waarschuwing: portomonee bestand is corrupt, data is veiliggesteld! Originele %s is opgeslagen als %s in %s; als uw balans of transacties incorrect zijn dient u een backup terug te zetten.</translation>
+        <translation>Waarschuwing: portomonee bestand is corrupt, data is veiliggesteld! Originele %s is opgeslagen als %s in %s; als uw saldo of transacties incorrect zijn dient u een backup terug te zetten.</translation>
     </message>
     <message>
         <source>Whitelist peers connecting from the given IP address (e.g. 1.2.3.4) or CIDR notated network (e.g. 1.2.3.0/24). Can be specified multiple times.</source>
@@ -4023,7 +4065,7 @@
     </message>
     <message>
         <source>Rescanning...</source>
-        <translation>Blokketen aan het herscannen...</translation>
+        <translation>Blokketen (blockchain) aan het herscannen...</translation>
     </message>
     <message>
         <source>Done loading</source>

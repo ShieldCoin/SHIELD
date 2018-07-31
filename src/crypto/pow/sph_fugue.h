@@ -1,8 +1,8 @@
-#ifndef SPH_FUGUE_H__
-#define SPH_FUGUE_H__
+#ifndef SHIELD_CRYPTO_POW_SPH_FUGUE_H
+#define SHIELD_CRYPTO_POW_SPH_FUGUE_H
 
 #include <stddef.h>
-#include "sph_types.h"
+#include <crypto/pow/sph_types.h>
 
 #ifdef __cplusplus
 extern "C"{

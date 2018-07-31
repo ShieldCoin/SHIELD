@@ -3,16 +3,16 @@
 // Copyright (c) 2018-2018 The SHIELD Core developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
-#ifndef HASH_QUBIT
-#define HASH_QUBIT
+#ifndef SHIELD_CRYPTO_POW_HASHQUBIT_H
+#define SHIELD_CRYPTO_POW_HASHQUBIT_H
 
-#include "uint256.h"
-#include "serialize.h"
-#include "sph_luffa.h"
-#include "sph_cubehash.h"
-#include "sph_shavite.h"
-#include "sph_simd.h"
-#include "sph_echo.h"
+#include <uint256.h>
+#include <serialize.h>
+#include <crypto/pow/sph_luffa.h>
+#include <crypto/pow/sph_cubehash.h>
+#include <crypto/pow/sph_shavite.h>
+#include <crypto/pow/sph_simd.h>
+#include <crypto/pow/sph_echo.h>
 
 #include <openssl/sha.h>
 #include <openssl/ripemd.h>

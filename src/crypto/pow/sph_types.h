@@ -44,8 +44,8 @@
  * @author   Thomas Pornin <thomas.pornin@cryptolog.com>
  */
 
-#ifndef SPH_TYPES_H__
-#define SPH_TYPES_H__
+#ifndef SHIELD_CRYPTO_POW_SPH_TYPES_H
+#define SHIELD_CRYPTO_POW_SPH_TYPES_H
 
 #include <limits.h>
 
