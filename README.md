@@ -1,7 +1,7 @@
 SHIELD Core integration/staging tree
 =====================================
 
-[![Build Status](https://travis-ci.org/ShieldCoin/shield.svg?branch=master)](https://travis-ci.org/ShieldCoin/shield)
+[![Build Status](https://travis-ci.org/ShieldCoin/SHIELD.svg?branch=master)](https://travis-ci.org/ShieldCoin/SHIELD)
 
 https://shieldx.sh
 
