@@ -587,11 +587,13 @@ UniValue getinfo(const JSONRPCRequest& request)
     obj.push_back(Pair("net_name",      gArgs.GetChainName()));
 #ifdef ENABLE_WALLET
     if (pwallet) {
-        obj.push_back(Pair("keypoololdest", pwallet->GetOldestKeyPoolTime()));
-        obj.push_back(Pair("keypoolsize",   (int)pwallet->GetKeyPoolSize()));
-    }
-    if (pwallet && pwallet->IsCrypted()) {
-        obj.push_back(Pair("unlocked_until", pwallet->nRelockTime));
+        LOCK(pwallet->cs_wallet){
+            obj.push_back(Pair("keypoololdest", pwallet->GetOldestKeyPoolTime()));
+            obj.push_back(Pair("keypoolsize",   (int)pwallet->GetKeyPoolSize()));
+            if (pwallet->IsCrypted()){
+                obj.push_back(Pair("unlocked_until", pwallet->nRelockTime));
+            }
+        }
     }
     obj.push_back(Pair("paytxfee",      ValueFromAmount(pwallet->m_pay_tx_fee.GetFeePerK())));
 #endif
