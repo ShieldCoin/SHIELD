@@ -570,6 +570,7 @@ UniValue getinfo(const JSONRPCRequest& request)
     }
 #endif
     obj.push_back(Pair("blocks",        (int)chainActive.Height()));
+    obj.pushKV("headers",               pindexBestHeader ? pindexBestHeader->nHeight : -1);
     obj.push_back(Pair("timeoffset",    GetTimeOffset()));
     if(g_connman)
         obj.push_back(Pair("connections",   (int)g_connman->GetNodeCount(CConnman::CONNECTIONS_ALL)));

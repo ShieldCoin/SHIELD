@@ -33,14 +33,6 @@ inline int GetTargetSpacing(int Height, bool fProofOfStake=false)
     }
 }
 
-inline int CalculateAvgBlockTimeForHeight(int nHeight){
-    if (nHeight < 1) nHeight = 1;
-    int result = (370000 * 3 + (nHeight - 370000) * 45)/nHeight;
-    if (result < 1) result = GetTargetSpacing(nHeight);
-    return result;
-}
-
-
 /**
  * Maximum amount of time that a block timestamp is allowed to exceed the
  * current network-adjusted time before the block will be accepted.

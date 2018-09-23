@@ -12,6 +12,12 @@
 //! The required delta of headers to the estimated number of available headers until we show the IBD progress
 static constexpr int HEADER_HEIGHT_DELTA_SYNC = 24;
 
+inline double CalculateAvgBlockTimeForHeight(int nowTime){
+    int elapsedTime = nowTime - 1530947160;
+    double result = ((800000 * 29.54 + elapsedTime) / (800000 + (elapsedTime / 45)));
+    return result;
+}
+
 namespace Ui {
     class ModalOverlay;
 }
