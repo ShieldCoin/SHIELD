@@ -387,9 +387,8 @@ unsigned int LwmaCalculateNextWorkRequired(const CBlockIndex* pindexLast, int al
     //  FTL in Ignition, Numus, and others can be found in main.h as DRIFT.
     //  Some coins took out a variable, and need to change the 2*60*60 here:
     //  if (block.GetBlockTime() > nAdjustedTime + 2 * 60 * 60)
-
-    const int64_t FTL = GetMaxClockDrift(pindexLast->nHeight);
     const int64_t T = GetTargetSpacing(pindexLast->nHeight);
+    int64_t FTL = pindexLast->nHeight > 1000000 ? 6 * T : GetMaxClockDrift(pindexLast->nHeight);
     const int64_t N = 60; // Avg Window
     const int64_t k = N*(N+1)*T/2; 
     const int height = pindexLast->nHeight + 1;

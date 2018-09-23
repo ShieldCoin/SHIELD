@@ -113,11 +113,11 @@ public:
 
         // The best chain should have at least this much work. 
         // KeyNote: (Kind of like a checkpoint)
-        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000ee64d1517d1d144ce9");
+        consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000ce6d8fbd491fc47fe53d");
 
         // By default assume that the signatures in ancestors of this block are valid.
         // KeyNote: Seems like speedup, similar to a checkpoint
-        consensus.defaultAssumeValid = uint256S("0x52b34c85e84cb1463f07578a5de63c731a419c2e9a52ec282d91f2869ce28164"); //670 000
+        consensus.defaultAssumeValid = uint256S("0x994fe5bcd9b8f5b240b31b6fa6b8765186d7c542ec7e25082343f574b8574f25"); //670 000
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -191,6 +191,7 @@ public:
                 {700000, uint256S("0x57348dd099ca2ca7120819b0b6c54687d1f9e4145bc49bd695a22cf3dfdb4577")},
                 {750000, uint256S("0x52b34c85e84cb1463f07578a5de63c731a419c2e9a52ec282d91f2869ce28164")},
                 {800200, uint256S("0xcf53d7971ca2dad44754058643935f2138e03b096cf114d60d9834b03ebd311f")},
+                {955000, uint256S("0x994fe5bcd9b8f5b240b31b6fa6b8765186d7c542ec7e25082343f574b8574f25")}
             }
         };
 
