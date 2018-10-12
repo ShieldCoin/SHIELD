@@ -583,7 +583,7 @@ UniValue getinfo(const JSONRPCRequest& request)
     obj.pushKV("difficulty_groestl",    GetDifficulty(ALGO_GROESTL));
     obj.pushKV("difficulty_lyra2re",    GetDifficulty(ALGO_LYRA2RE));
     obj.pushKV("difficulty_blake",      GetDifficulty(ALGO_BLAKE));
-    obj.pushKV("difficulty_x16s",      GetDifficulty(ALGO_X16S));
+    obj.pushKV("difficulty_x16s",       GetDifficulty(ALGO_X16S));
     obj.push_back(Pair("testnet",       Params().NetworkIDString() == CBaseChainParams::TESTNET));
     obj.push_back(Pair("net_name",      gArgs.GetChainName()));
 #ifdef ENABLE_WALLET
@@ -594,9 +594,8 @@ UniValue getinfo(const JSONRPCRequest& request)
         if (pwallet->IsCrypted()){
             obj.push_back(Pair("unlocked_until", pwallet->nRelockTime));
         }
-    }
-    
     obj.push_back(Pair("paytxfee",      ValueFromAmount(pwallet->m_pay_tx_fee.GetFeePerK())));
+    }
 #endif
     obj.push_back(Pair("relayfee",      ValueFromAmount(::minRelayTxFee.GetFeePerK())));
     obj.push_back(Pair("errors",        GetWarnings("statusbar")));
