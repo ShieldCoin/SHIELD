@@ -1876,7 +1876,7 @@
         <translation>Historie vyžádaných plateb</translation>
     </message>
     <message>
-        <source>&amp;Request payment</source>
+        <source>&amp;Generate</source>
         <translation>&amp;Vyžádat platbu</translation>
     </message>
     <message>

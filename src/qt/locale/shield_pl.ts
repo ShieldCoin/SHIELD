@@ -1860,7 +1860,7 @@
         <translation>Żądanie historii płatności</translation>
     </message>
     <message>
-        <source>&amp;Request payment</source>
+        <source>&amp;Generate</source>
         <translation>&amp;Żądaj płatności</translation>
     </message>
     <message>

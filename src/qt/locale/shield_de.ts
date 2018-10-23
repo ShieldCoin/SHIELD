@@ -1892,7 +1892,7 @@
         <translation>Verlauf der angeforderten Zahlungen</translation>
     </message>
     <message>
-        <source>&amp;Request payment</source>
+        <source>&amp;Generate</source>
         <translation>&amp;Zahlung anfordern</translation>
     </message>
     <message>

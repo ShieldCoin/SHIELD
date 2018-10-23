@@ -2459,7 +2459,7 @@
     </message>
     <message>
         <location line="-162"/>
-        <source>&amp;Request payment</source>
+        <source>&amp;Generate</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

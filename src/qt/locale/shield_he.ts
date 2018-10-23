@@ -1820,7 +1820,7 @@
         <translation>היסטוריית בקשות תשלום</translation>
     </message>
     <message>
-        <source>&amp;Request payment</source>
+        <source>&amp;Generate</source>
         <translation>&amp;בקשת תשלום</translation>
     </message>
     <message>

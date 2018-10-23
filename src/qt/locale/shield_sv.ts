@@ -1849,7 +1849,7 @@ Var vänlig och försök igen.</translation>
         <translation>Historik för begärda betalningar</translation>
     </message>
     <message>
-        <source>&amp;Request payment</source>
+        <source>&amp;Generate</source>
         <translation>Begä&amp;r betalning</translation>
     </message>
     <message>

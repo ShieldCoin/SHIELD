@@ -1020,7 +1020,7 @@
         <translation>Obriši sva polja</translation>
     </message>
     <message>
-        <source>&amp;Request payment</source>
+        <source>&amp;Generate</source>
         <translation>&amp;Zatraži plaćanje</translation>
     </message>
     <message>

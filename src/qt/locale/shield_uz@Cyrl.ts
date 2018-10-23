@@ -918,7 +918,7 @@
         <translation>Сўралган тўлов тарихи</translation>
     </message>
     <message>
-        <source>&amp;Request payment</source>
+        <source>&amp;Generate</source>
         <translation>Тўловни &amp;сўраш</translation>
     </message>
     <message>

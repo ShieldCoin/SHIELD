@@ -897,7 +897,7 @@ Ví của bạn chưa được mã hóa.</translation>
         <translation>Lịch sử yêu cầu thanh toán</translation>
     </message>
     <message>
-        <source>&amp;Request payment</source>
+        <source>&amp;Generate</source>
         <translation>&amp;Yêu cầu thanh toán</translation>
     </message>
     <message>

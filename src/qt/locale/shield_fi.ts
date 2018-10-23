@@ -1820,7 +1820,7 @@
         <translation>Pyydettyjen maksujen historia</translation>
     </message>
     <message>
-        <source>&amp;Request payment</source>
+        <source>&amp;Generate</source>
         <translation>&amp;Vastaanota maksu</translation>
     </message>
     <message>

@@ -1809,7 +1809,7 @@
         <translation>请求付款的历史</translation>
     </message>
     <message>
-        <source>&amp;Request payment</source>
+        <source>&amp;Generate</source>
         <translation>请求付款(&amp;R)</translation>
     </message>
     <message>

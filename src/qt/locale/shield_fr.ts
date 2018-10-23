@@ -1896,7 +1896,7 @@
         <translation>Historique des paiements demandés</translation>
     </message>
     <message>
-        <source>&amp;Request payment</source>
+        <source>&amp;Generate</source>
         <translation>&amp;Demander un paiement</translation>
     </message>
     <message>

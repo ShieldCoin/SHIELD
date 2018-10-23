@@ -1452,7 +1452,7 @@
         <translation>Изискана история на плащанията</translation>
     </message>
     <message>
-        <source>&amp;Request payment</source>
+        <source>&amp;Generate</source>
         <translation>&amp;Изискване на плащане</translation>
     </message>
     <message>

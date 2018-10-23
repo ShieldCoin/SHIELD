@@ -1892,7 +1892,7 @@
         <translation>支払リクエスト履歴</translation>
     </message>
     <message>
-        <source>&amp;Request payment</source>
+        <source>&amp;Generate</source>
         <translation>支払をリクエストする (&amp;R)</translation>
     </message>
     <message>

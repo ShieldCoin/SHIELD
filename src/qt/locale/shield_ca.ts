@@ -1820,7 +1820,7 @@
         <translation>Historial de pagaments sol·licitats</translation>
     </message>
     <message>
-        <source>&amp;Request payment</source>
+        <source>&amp;Generate</source>
         <translation>&amp;Sol·licitud de pagament</translation>
     </message>
     <message>

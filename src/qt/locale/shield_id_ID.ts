@@ -1358,7 +1358,7 @@
         <translation>Riwayat pembayaran yang diminta Anda</translation>
     </message>
     <message>
-        <source>&amp;Request payment</source>
+        <source>&amp;Generate</source>
         <translation>&amp;Minta pembayaran</translation>
     </message>
     <message>

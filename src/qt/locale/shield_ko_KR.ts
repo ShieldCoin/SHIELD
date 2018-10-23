@@ -1896,7 +1896,7 @@
         <translation>지출기록 확인</translation>
     </message>
     <message>
-        <source>&amp;Request payment</source>
+        <source>&amp;Generate</source>
         <translation>지불 요청(&amp;R)</translation>
     </message>
     <message>

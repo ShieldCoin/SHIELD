@@ -1092,7 +1092,7 @@
         <translation>მოთხოვნილი გადახდების ისტორია</translation>
     </message>
     <message>
-        <source>&amp;Request payment</source>
+        <source>&amp;Generate</source>
         <translation>&amp;გადახდის მოთხოვნა</translation>
     </message>
     <message>

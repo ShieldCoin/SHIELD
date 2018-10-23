@@ -1880,7 +1880,7 @@
         <translation>Talep edilen ödemelerin tarihçesi</translation>
     </message>
     <message>
-        <source>&amp;Request payment</source>
+        <source>&amp;Generate</source>
         <translation>Ödeme &amp;talep et</translation>
     </message>
     <message>

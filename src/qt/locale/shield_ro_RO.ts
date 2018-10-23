@@ -1856,7 +1856,7 @@
         <translation>Istoricul plăţilor cerute</translation>
     </message>
     <message>
-        <source>&amp;Request payment</source>
+        <source>&amp;Generate</source>
         <translation>&amp;Cerere plată</translation>
     </message>
     <message>

@@ -1408,7 +1408,7 @@
         <translation>Skoonmaak</translation>
     </message>
     <message>
-        <source>&amp;Request payment</source>
+        <source>&amp;Generate</source>
         <translation>&amp;Versoek betaling</translation>
     </message>
     <message>

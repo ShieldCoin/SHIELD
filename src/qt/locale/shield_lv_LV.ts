@@ -854,7 +854,7 @@
         <translation>Pieprasīto maksājumu vēsture</translation>
     </message>
     <message>
-        <source>&amp;Request payment</source>
+        <source>&amp;Generate</source>
         <translation>&amp;Pieprasīt maksājumu</translation>
     </message>
     <message>

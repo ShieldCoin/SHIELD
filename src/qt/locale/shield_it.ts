@@ -1865,7 +1865,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>Cronologia pagamenti richiesti</translation>
     </message>
     <message>
-        <source>&amp;Request payment</source>
+        <source>&amp;Generate</source>
         <translation>&amp;Richiedi pagamento</translation>
     </message>
     <message>

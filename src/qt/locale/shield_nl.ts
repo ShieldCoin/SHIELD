@@ -1914,7 +1914,7 @@
         <translation>Geschiedenis van de betalingsverzoeken</translation>
     </message>
     <message>
-        <source>&amp;Request payment</source>
+        <source>&amp;Generate</source>
         <translation>&amp;Betalingsverzoek</translation>
     </message>
     <message>

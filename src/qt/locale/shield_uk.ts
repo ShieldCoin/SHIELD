@@ -1748,7 +1748,7 @@
         <translation>Історія запитів платежу</translation>
     </message>
     <message>
-        <source>&amp;Request payment</source>
+        <source>&amp;Generate</source>
         <translation>Н&amp;адіслати запит платежу</translation>
     </message>
     <message>

@@ -1896,8 +1896,8 @@
         <translation>Requested payments history</translation>
     </message>
     <message>
-        <source>&amp;Request payment</source>
-        <translation>&amp;Request payment</translation>
+        <source>&amp;Generate</source>
+        <translation>&amp;Generate</translation>
     </message>
     <message>
         <source>Bech32 addresses (BIP-173) are cheaper to spend from and offer better protection against typos. When unchecked a P2SH wrapped SegWit address will be created, compatible with older wallets.</source>

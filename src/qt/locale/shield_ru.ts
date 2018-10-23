@@ -1892,7 +1892,7 @@
         <translation>История запрошенных платежей</translation>
     </message>
     <message>
-        <source>&amp;Request payment</source>
+        <source>&amp;Generate</source>
         <translation>&amp;Запросить платёж</translation>
     </message>
     <message>

@@ -1856,7 +1856,7 @@
         <translation>Yêu cầu lịch sử giao dịch</translation>
     </message>
     <message>
-        <source>&amp;Request payment</source>
+        <source>&amp;Generate</source>
         <translation>&amp;Request payment</translation>
     </message>
     <message>

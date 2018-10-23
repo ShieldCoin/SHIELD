@@ -1892,7 +1892,7 @@
         <translation>Historik over betalingsanmodninger</translation>
     </message>
     <message>
-        <source>&amp;Request payment</source>
+        <source>&amp;Generate</source>
         <translation>&amp;Anmod om betaling</translation>
     </message>
     <message>

@@ -1877,7 +1877,7 @@ Esta sincronização inicial é muito exigente e pode expor problemas de hardwar
         <translation>Histórico de cobranças</translation>
     </message>
     <message>
-        <source>&amp;Request payment</source>
+        <source>&amp;Generate</source>
         <translation>&amp;Requisitar Pagamento</translation>
     </message>
     <message>

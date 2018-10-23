@@ -1837,7 +1837,7 @@
         <translation>Histórico de pagamentos solicitados</translation>
     </message>
     <message>
-        <source>&amp;Request payment</source>
+        <source>&amp;Generate</source>
         <translation>&amp;Requisitar Pagamento</translation>
     </message>
     <message>

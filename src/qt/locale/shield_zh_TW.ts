@@ -1896,7 +1896,7 @@
         <translation>先前要求付款的記錄</translation>
     </message>
     <message>
-        <source>&amp;Request payment</source>
+        <source>&amp;Generate</source>
         <translation>要求付款</translation>
     </message>
     <message>

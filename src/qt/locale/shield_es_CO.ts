@@ -1627,7 +1627,7 @@ Exportar los datos en la pestaña actual a un archivo</translation>
         <translation>Historial de pagos solicitado</translation>
     </message>
     <message>
-        <source>&amp;Request payment</source>
+        <source>&amp;Generate</source>
         <translation>Solicitar pago</translation>
     </message>
     <message>

@@ -1028,7 +1028,7 @@
         <translation>Forigi</translation>
     </message>
     <message>
-        <source>&amp;Request payment</source>
+        <source>&amp;Generate</source>
         <translation>&amp;Peti pagon</translation>
     </message>
     <message>
