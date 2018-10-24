@@ -120,6 +120,13 @@ private:
     QAction *backupWalletAction;
     QAction *changePassphraseAction;
     QAction *aboutQtAction;
+    QAction *openInfoAction;
+    QAction *openGraphAction;
+    QAction *openPeersAction;
+    // QAction *openRepairAction;
+    QAction *openConfEditorAction;
+    // QAction *openMNConfEditorAction;
+    QAction *showDatadirAction;
     QAction *openRPCConsoleAction;
     QAction *openAction;
     QAction *showHelpMessageAction;
@@ -241,6 +248,20 @@ private Q_SLOTS:
     void aboutClicked();
     /** Show debug window */
     void showDebugWindow();
+    /** Show debug window and set focus to the appropriate tab */
+    void showInfo();
+    void showConsole();
+    void showGraph();
+    void showPeers();
+    // void showRepair();
+
+    /** Open external (default) editor with the config file */
+    void showConfEditor();
+    /** Open external (default) editor with masternode.conf */
+    // void showMNConfEditor();
+    /** Show folder with wallet backups in default file browser */
+    void showDatadir();
+
     /** Show debug window and set focus to the console */
     void showDebugWindowActivateConsole();
     /** Show help message dialog */

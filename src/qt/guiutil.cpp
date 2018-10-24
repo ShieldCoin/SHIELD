@@ -418,6 +418,24 @@ bool openSHIELDConf()
     return QDesktopServices::openUrl(QUrl::fromLocalFile(boostPathToQString(pathConfig)));
 }
 
+// void openMNConfigfile()
+// {
+//     boost::filesystem::path pathConfig = GetMasternodeConfigFile();
+
+//     /* Open masternode.conf with the associated application */
+//     if (boost::filesystem::exists(pathConfig))
+//         QDesktopServices::openUrl(QUrl::fromLocalFile(boostPathToQString(pathConfig)));
+// }
+
+void showDatadir()
+{
+    boost::filesystem::path dataDir = GetDataDir();
+
+    /* Open folder with default browser */
+    if (boost::filesystem::exists(dataDir))
+        QDesktopServices::openUrl(QUrl::fromLocalFile(boostPathToQString(dataDir)));
+}
+
 void SubstituteFonts(const QString& language)
 {
 #if defined(Q_OS_MAC)

@@ -354,8 +354,48 @@
         <translation>ウォレット暗号化用パスフレーズの変更</translation>
     </message>
     <message>
+        <source>&amp;Information</source>
+        <translation>診断情報 (&amp;I)</translation>
+    </message>
+    <message>
+        <source>Show diagnostic information</source>
+        <translation>診断情報を表示</translation>
+    </message>
+    <message>
         <source>&amp;Debug window</source>
         <translation>デバッグ ウインドウ (&amp;D)</translation>
+    </message>
+    <message>
+        <source>&amp;Network Monitor</source>
+        <translation>ネットワークモニター(&amp;N)</translation>
+    </message>
+    <message>
+        <source>Show network monitor</source>
+        <translation>ネットワークモニターを表示</translation>
+    </message>
+    <message>
+        <source>&amp;Peers list</source>
+        <translation>ピアリスト (&amp;P)</translation>
+    </message>
+    <message>
+        <source>Show peers info</source>
+        <translation>ピア情報を表示</translation>
+    </message>
+    <message>
+        <source>Open the %1 configuration file from the working directory</source>
+        <translation>%1の設定ファイルをワーキングディレクトリから開く</translation>
+    </message>
+    <message>
+        <source>Open &amp;Configuration File</source>
+        <translation>設定ファイルを開く (&amp;C)</translation>
+    </message>
+    <message>
+        <source>Open Data &amp;Folder</source>
+        <translation>データフォルダーを開く (&amp;F)</translation>
+    </message>
+    <message>
+        <source>Open the %1 working directory</source>
+        <translation>%1 ワーキングディレクトリを開く</translation>
     </message>
     <message>
         <source>Open debugging and diagnostic console</source>
@@ -408,6 +448,10 @@
     <message>
         <source>&amp;Settings</source>
         <translation>設定(&amp;S)</translation>
+    </message>
+    <message>
+        <source>&amp;Tools</source>
+        <translation>ツール(&amp;T)</translation>
     </message>
     <message>
         <source>&amp;Help</source>
@@ -1570,7 +1614,7 @@
     </message>
     <message>
         <source>&amp;Information</source>
-        <translation>情報 (&amp;I)</translation>
+        <translation>診断情報 (&amp;I)</translation>
     </message>
     <message>
         <source>Debug window</source>
@@ -1582,7 +1626,7 @@
     </message>
     <message>
         <source>Using BerkeleyDB version</source>
-        <translation>使用中のBerkleyDBバージョン</translation>
+        <translation>使用中のBerkeleyDBバージョン</translation>
     </message>
     <message>
         <source>Datadir</source>

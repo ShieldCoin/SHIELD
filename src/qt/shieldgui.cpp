@@ -380,15 +380,33 @@ void SHIELDGUI::createActions()
 
     openRPCConsoleAction = new QAction(platformStyle->TextColorIcon(":/icons/debugwindow"), tr("&Debug window"), this);
     openRPCConsoleAction->setStatusTip(tr("Open debugging and diagnostic console"));
-    // initially disable the debug window menu item
+    openInfoAction = new QAction(platformStyle->TextColorIcon(":/icons/info"), tr("&Information"), this);
+    openInfoAction->setStatusTip(tr("Show diagnostic information"));
+    openGraphAction = new QAction(QIcon(":/icons/connect_4"), tr("&Network Monitor"), this);
+    openGraphAction->setStatusTip(tr("Show network monitor"));
+    openPeersAction = new QAction(QIcon(":/icons/connect_4"), tr("&Peers list"), this);
+    openPeersAction->setStatusTip(tr("Show peers info"));
+    // openRepairAction = new QAction(QIcon(":/icons/tx_mined"), tr("Wallet &Repair"), this);
+    // openRepairAction->setStatusTip(tr("Show wallet repair options"));
+    openConfEditorAction = new QAction(QIcon(":/icons/edit"), tr("Open &Configuration File"), this);
+    openConfEditorAction->setStatusTip(tr("Open the %1 configuration file from the working directory").arg(tr(PACKAGE_NAME)));
+    // openMNConfEditorAction = new QAction(QIcon(":/icons/edit"), tr("Open &Masternode Configuration File"), this);
+    // openMNConfEditorAction->setStatusTip(tr("Open Masternode configuration file"));    
+    showDatadirAction = new QAction(QIcon(":/icons/open"), tr("Open Data &Folder"), this);
+    showDatadirAction->setStatusTip(tr("Open the %1 working directory").arg(tr(PACKAGE_NAME)));
+    // initially disable the debug window menu items
+    openInfoAction->setEnabled(false);
     openRPCConsoleAction->setEnabled(false);
+    openGraphAction->setEnabled(false);
+    openPeersAction->setEnabled(false);
+    // openRepairAction->setEnabled(false);
 
     usedSendingAddressesAction = new QAction(platformStyle->TextColorIcon(":/icons/address-book"), tr("&Sending addresses..."), this);
     usedSendingAddressesAction->setStatusTip(tr("Show the list of used sending addresses and labels"));
     usedReceivingAddressesAction = new QAction(platformStyle->TextColorIcon(":/icons/address-book"), tr("&Receiving addresses..."), this);
     usedReceivingAddressesAction->setStatusTip(tr("Show the list of used receiving addresses and labels"));
 
-    openAction = new QAction(platformStyle->TextColorIcon(":/icons/open"), tr("Open &URI..."), this);
+    openAction = new QAction(platformStyle->TextColorIcon(":/icons/editpaste"), tr("Open &URI..."), this);
     openAction->setStatusTip(tr("Open a shield: URI or payment request"));
 
     showHelpMessageAction = new QAction(platformStyle->TextColorIcon(":/icons/info"), tr("&Command-line options"), this);
@@ -401,7 +419,18 @@ void SHIELDGUI::createActions()
     connect(optionsAction, SIGNAL(triggered()), this, SLOT(optionsClicked()));
     connect(toggleHideAction, SIGNAL(triggered()), this, SLOT(toggleHidden()));
     connect(showHelpMessageAction, SIGNAL(triggered()), this, SLOT(showHelpMessageClicked()));
-    connect(openRPCConsoleAction, SIGNAL(triggered()), this, SLOT(showDebugWindow()));
+    connect(openRPCConsoleAction, SIGNAL(triggered()), this, SLOT(showConsole()));
+
+    // Jump directly to tabs in RPC-console
+    connect(openInfoAction, SIGNAL(triggered()), this, SLOT(showInfo()));
+    connect(openGraphAction, SIGNAL(triggered()), this, SLOT(showGraph()));
+    connect(openPeersAction, SIGNAL(triggered()), this, SLOT(showPeers()));
+    // connect(openRepairAction, SIGNAL(triggered()), this, SLOT(showRepair()));
+
+    // Open configs and backup folder from menu
+    connect(openConfEditorAction, SIGNAL(triggered()), this, SLOT(showConfEditor()));
+    // connect(openMNConfEditorAction, SIGNAL(triggered()), this, SLOT(showMNConfEditor()));
+    connect(showDatadirAction, SIGNAL(triggered()), this, SLOT(showDatadir()));
     // prevents an open debug window from becoming stuck/unusable on client shutdown
     connect(quitAction, SIGNAL(triggered()), rpcConsole, SLOT(hide()));
 
@@ -457,11 +486,21 @@ void SHIELDGUI::createMenuBar()
     }
     settings->addAction(optionsAction);
 
-    QMenu *help = appMenuBar->addMenu(tr("&Help"));
     if(walletFrame)
     {
-        help->addAction(openRPCConsoleAction);
+        QMenu *tools = appMenuBar->addMenu(tr("&Tools"));
+        tools->addAction(openInfoAction);
+        tools->addAction(openRPCConsoleAction);
+        tools->addAction(openGraphAction);
+        tools->addAction(openPeersAction);
+        // tools->addAction(openRepairAction);
+        tools->addSeparator();
+        tools->addAction(openConfEditorAction);
+        // tools->addAction(openMNConfEditorAction);
+        tools->addAction(showDatadirAction);
     }
+
+    QMenu *help = appMenuBar->addMenu(tr("&Help"));
     help->addAction(showHelpMessageAction);
     help->addSeparator();
     help->addAction(aboutAction);
@@ -760,6 +799,55 @@ void SHIELDGUI::gotoVerifyMessageTab(QString addr)
 {
     if (walletFrame) walletFrame->gotoVerifyMessageTab(addr);
 }
+
+
+void SHIELDGUI::showInfo()
+{
+    rpcConsole->setTabFocus(RPCConsole::TAB_INFO);
+    showDebugWindow();
+}
+
+void SHIELDGUI::showConsole()
+{
+    rpcConsole->setTabFocus(RPCConsole::TAB_CONSOLE);
+    showDebugWindow();
+}
+
+void SHIELDGUI::showGraph()
+{
+    rpcConsole->setTabFocus(RPCConsole::TAB_GRAPH);
+    showDebugWindow();
+}
+
+void SHIELDGUI::showPeers()
+{
+    rpcConsole->setTabFocus(RPCConsole::TAB_PEERS);
+    showDebugWindow();
+}
+
+// void SHIELDGUI::showRepair()
+// {
+//     rpcConsole->setTabFocus(RPCConsole::TAB_REPAIR);
+//     showDebugWindow();
+// }
+
+void SHIELDGUI::showConfEditor()
+{
+    if (!GUIUtil::openSHIELDConf()){
+        QMessageBox::critical(this, tr("Error"), tr("The configuration file could not be opened."));
+    }
+}
+
+// void SHIELDGUI::showMNConfEditor()
+// {
+//     GUIUtil::openMNConfigfile();
+// }
+
+void SHIELDGUI::showDatadir()
+{
+    GUIUtil::showDatadir();
+}
+
 #endif // ENABLE_WALLET
 
 void SHIELDGUI::updateNetworkState()
@@ -1031,10 +1119,15 @@ void SHIELDGUI::closeEvent(QCloseEvent *event)
 
 void SHIELDGUI::showEvent(QShowEvent *event)
 {
-    // enable the debug window when the main window shows up
+    // enable the debug windows when the main window shows up
     openRPCConsoleAction->setEnabled(true);
     aboutAction->setEnabled(true);
     optionsAction->setEnabled(true);
+    openInfoAction->setEnabled(true);
+    openGraphAction->setEnabled(true);
+    openPeersAction->setEnabled(true);
+    openConfEditorAction->setEnabled(true);
+    // openRepairAction->setEnabled(true);
 }
 
 #ifdef ENABLE_WALLET

@@ -121,6 +121,12 @@ namespace GUIUtil
     // Open the config file
     bool openSHIELDConf();
 
+    // Open masternode.conf
+    // void openMNConfigfile();	
+
+    // Browse data folder
+    void showDatadir();
+
     // Replace invalid default fonts with known good ones
     void SubstituteFonts(const QString& language);
 
