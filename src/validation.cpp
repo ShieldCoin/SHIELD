@@ -56,6 +56,14 @@
 #define MICRO 0.000001
 #define MILLI 0.001
 
+
+const CBlockIndex* GetLastBlockIndex4Algo(const CBlockIndex* pindex, int algo)
+{
+    while (pindex && pindex->pprev && pindex->GetBlockHeader().GetAlgo() != algo)
+        pindex = pindex->pprev;
+    return pindex;
+}
+
 /**
  * Global state
  */
@@ -3306,6 +3314,9 @@ static bool ContextualCheckBlockHeader(const CBlockHeader& block, CValidationSta
     // Check timestamp
     if (block.GetBlockTime() > nAdjustedTime + GetMaxClockDrift(nHeight))
         return state.Invalid(false, REJECT_INVALID, "time-too-new", "block timestamp too far in the future");
+
+    if (block.GetBlockTime() < GetLastBlockIndex4Algo(pindexPrev, block.GetAlgo())->GetBlockTime() - GetMaxClockDrift(nHeight))
+        return state.Invalid(false, REJECT_INVALID, "time-too-old", "block timestamp too far in the past");
 
     // Reject outdated version blocks when 95% (75% on testnet) of the network has upgraded:
     // check for version 2, 3 and 4 upgrades

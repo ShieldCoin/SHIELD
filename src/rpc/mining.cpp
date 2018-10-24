@@ -45,7 +45,7 @@ unsigned int ParseConfirmTarget(const UniValue& value)
  * If 'height' is nonnegative, compute the estimate at the time when a given block was found.
  */
 static UniValue GetNetworkHashPS(int lookup, int height, int algo = ALGO) {
-    CBlockIndex *pb = GetLastBlockIndex4Algo(chainActive.Tip(), algo);
+    const CBlockIndex *pb = GetLastBlockIndex4Algo(chainActive.Tip(), algo);
 
     if (height >= 0 && height < chainActive.Height())
         pb = GetLastBlockIndex4Algo(chainActive[height], algo);
@@ -57,7 +57,7 @@ static UniValue GetNetworkHashPS(int lookup, int height, int algo = ALGO) {
     if (lookup <= 0)
         lookup = 2;
 
-    CBlockIndex *pb0 = pb;
+    const CBlockIndex *pb0 = pb;
     int64_t minTime = pb0->GetBlockTime();
     int64_t maxTime = minTime;
     arith_uint256 workTotal = GetBlockProof(*pb);

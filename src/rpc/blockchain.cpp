@@ -50,12 +50,6 @@ static std::condition_variable cond_blockchange;
 static CUpdatedBlock latestblock;
 
 
-CBlockIndex* GetLastBlockIndex4Algo(CBlockIndex* pindex, int algo)
-{
-    while (pindex && pindex->pprev && pindex->GetBlockHeader().GetAlgo() != algo)
-        pindex = pindex->pprev;
-    return pindex;
-}
 
 /* Calculate the difficulty for a given block index.
  */

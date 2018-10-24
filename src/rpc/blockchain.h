@@ -10,8 +10,6 @@ class CBlock;
 class CBlockIndex;
 class UniValue;
 
-// static const CBlockIndex* GetLastBlockIndex4Algo(const CBlockIndex* pindex, int algo);
-
 /**
  * Get the difficulty of the net wrt to the given block index, or the chain tip if
  * not provided.
@@ -35,9 +33,5 @@ UniValue mempoolToJSON(bool fVerbose = false);
 
 /** Block header to JSON */
 UniValue blockheaderToJSON(const CBlockIndex* blockindex);
-
-
-CBlockIndex* GetLastBlockIndex4Algo(CBlockIndex* pindex, int algo);
-
 
 #endif

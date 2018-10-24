@@ -487,6 +487,8 @@ extern std::unique_ptr<CBlockTreeDB> pblocktree;
  */
 int GetSpendHeight(const CCoinsViewCache& inputs);
 
+const CBlockIndex* GetLastBlockIndex4Algo(const CBlockIndex* pindex, int algo);
+
 extern VersionBitsCache versionbitscache;
 
 /**
