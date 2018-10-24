@@ -113,11 +113,11 @@ public:
 
         // The best chain should have at least this much work. 
         // KeyNote: (Kind of like a checkpoint)
-        consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000ce6d8fbd491fc47fe53d");
+        consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000dbcee026e0daa8792d14");
 
         // By default assume that the signatures in ancestors of this block are valid.
         // KeyNote: Seems like speedup, similar to a checkpoint
-        consensus.defaultAssumeValid = uint256S("0x994fe5bcd9b8f5b240b31b6fa6b8765186d7c542ec7e25082343f574b8574f25"); //670 000
+        consensus.defaultAssumeValid = uint256S("0x3b6be1ee9d7162e7dff6a6acaf48a864a86080901410d163ba32ece59b4a8caa"); //1020000
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -176,22 +176,23 @@ public:
 
         checkpointData = {
             {
-                { 5000, uint256S("0xcadcdeb695791dccd20b5a284a32abd73a364d5cb23ff31d62a35d2c97da2a52")},
-                { 25000, uint256S("0x95ae6a7776b2ebdd0be13df931f497a384061557ba2747187413aaa2d5e6dad3")},
-                { 50000, uint256S("0xe20c589f8e50bafda6870790f1a9bcb945018266c762384c75ca3f86d240d764")},
-                {100000, uint256S("0xd0aa58f4abb1b422595a850cc32dc081e9235774d5d9517e1a469f202ddb791e")},
-                {150000, uint256S("0x90ce1a2a93125950ad4df9ba9ebd86e94d372617b8700b1da3555c740edc944f")},
-                {200000, uint256S("0xaac305b12967a7186f0e4cb3a781a73ceca81f98dec396178f2f901b2856d106")},
-                {300000, uint256S("0x1eae4274a8642434391a611748082436143860a9d8e15d78ecb4fe728eb99f5c")},
-                {380000, uint256S("0x907ffa7caeaa7d5216b8a43517e66feef3c655e1da9289eef2e2a7f0e054248e")},
-                {400000, uint256S("0xef80fd22b6fa2de548a6052aeedef2183b1e2571337bd550bd3d7579ebdd9a16")},
-                {500000, uint256S("0x0000000000058123fb81a96ede321be8d9b9233b4bdc9de92a7054718014755a")},
-                {600000, uint256S("0xbea64501cfeab8ad75aef74b3d2bc8d3630bc613ad80c082fad19b0157afe923")},
-                {635000, uint256S("0xca42c722dbd90a18ac2617435224d253cc6c258f7bd7db41a8f0574a1132534d")},
-                {700000, uint256S("0x57348dd099ca2ca7120819b0b6c54687d1f9e4145bc49bd695a22cf3dfdb4577")},
-                {750000, uint256S("0x52b34c85e84cb1463f07578a5de63c731a419c2e9a52ec282d91f2869ce28164")},
-                {800200, uint256S("0xcf53d7971ca2dad44754058643935f2138e03b096cf114d60d9834b03ebd311f")},
-                {955000, uint256S("0x994fe5bcd9b8f5b240b31b6fa6b8765186d7c542ec7e25082343f574b8574f25")}
+                {   5000, uint256S("0xcadcdeb695791dccd20b5a284a32abd73a364d5cb23ff31d62a35d2c97da2a52")},
+                {  25000, uint256S("0x95ae6a7776b2ebdd0be13df931f497a384061557ba2747187413aaa2d5e6dad3")},
+                {  50000, uint256S("0xe20c589f8e50bafda6870790f1a9bcb945018266c762384c75ca3f86d240d764")},
+                { 100000, uint256S("0xd0aa58f4abb1b422595a850cc32dc081e9235774d5d9517e1a469f202ddb791e")},
+                { 150000, uint256S("0x90ce1a2a93125950ad4df9ba9ebd86e94d372617b8700b1da3555c740edc944f")},
+                { 200000, uint256S("0xaac305b12967a7186f0e4cb3a781a73ceca81f98dec396178f2f901b2856d106")},
+                { 300000, uint256S("0x1eae4274a8642434391a611748082436143860a9d8e15d78ecb4fe728eb99f5c")},
+                { 380000, uint256S("0x907ffa7caeaa7d5216b8a43517e66feef3c655e1da9289eef2e2a7f0e054248e")},
+                { 400000, uint256S("0xef80fd22b6fa2de548a6052aeedef2183b1e2571337bd550bd3d7579ebdd9a16")},
+                { 500000, uint256S("0x0000000000058123fb81a96ede321be8d9b9233b4bdc9de92a7054718014755a")},
+                { 600000, uint256S("0xbea64501cfeab8ad75aef74b3d2bc8d3630bc613ad80c082fad19b0157afe923")},
+                { 635000, uint256S("0xca42c722dbd90a18ac2617435224d253cc6c258f7bd7db41a8f0574a1132534d")},
+                { 700000, uint256S("0x57348dd099ca2ca7120819b0b6c54687d1f9e4145bc49bd695a22cf3dfdb4577")},
+                { 750000, uint256S("0x52b34c85e84cb1463f07578a5de63c731a419c2e9a52ec282d91f2869ce28164")},
+                { 800200, uint256S("0xcf53d7971ca2dad44754058643935f2138e03b096cf114d60d9834b03ebd311f")},
+                { 955000, uint256S("0x994fe5bcd9b8f5b240b31b6fa6b8765186d7c542ec7e25082343f574b8574f25")},
+                {1020000, uint256S("0x3b6be1ee9d7162e7dff6a6acaf48a864a86080901410d163ba32ece59b4a8caa")}
             }
         };
 
