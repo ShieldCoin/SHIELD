@@ -1,76 +1,48 @@
-SHIELD Core integration/staging tree
+![](share/img/banner.png)
 =====================================
 
-[![Build Status](https://travis-ci.org/ShieldCoin/SHIELD.svg?branch=master)](https://travis-ci.org/ShieldCoin/SHIELD)
+**Homepage**: https://www.shieldx.sh<br/>
 
-https://shieldx.sh
+**Email**: contact@shieldx.sh<br/>
+**Discord**: https://discord.gg/PnyxZwk<br/>
+**Twitter**: https://twitter.com/shieldxsh<br/>
+**Medium**: https://medium.com/@shieldxsh<br/>
+**GitLab**: https://git.shieldx.sh/SHIELD-team/<br/>
+**BitcoinTalk**: https://bitcointalk.org/index.php?topic=2234453.0<br/>
 
-What is SHIELD?
-----------------
+**Whitepaper**: [here](https://shieldx.sh/link/wp-en)<br/>
 
-SHIELD is an experimental digital currency that enables instant payments to
-anyone, anywhere in the world. SHIELD uses peer-to-peer technology to operate
-with no central authority: managing transactions and issuing money are carried
-out collectively by the network. SHIELD Core is the name of open source
-software which enables the use of this currency.
+**Current codebase**: Bitcoin Core v0.16.1<br/>
 
-For more information, as well as an immediately useable, binary version of
-the SHIELD Core software, see https://shieldx.sh/wallets, or read the
-[original whitepaper](https://shieldcore.org/shield.pdf).
+Specifications:
+--------------
 
-License
--------
+* **Symbol**: XSH
+* **Consensus**: Multi-algo PoW (proof-of-work), with future custom PoS (proof-of-stake)
+* **Mining algorithms**: `scrypt`, `x16s`, `x17`, `blake2s`, `lyra2v2`, `myr-groestl`
+* **Blocktime**: 45 seconds
+* **RPC port**: `20103`
+* **P2P port**: `21103`
+* **Total reward cap**: ~750 million
+* **Premine**: Zero
+* **ICO (Initial Coin Offering)**: Zero
+* **Blockreward schedule**:
+  * Blocks 1 to 14,000 : 8,000 coins
+  * 14,001 to 28,000 : 4,000 coins
+  * 28,001 to 42,000: 2,000 coins
+  * 42,001 to 210,000: 1,000 coins
+  * 210,001 to 378,000: 500 coins
+  * 378,001 to 546,000: 250 coins
+  * 546,001 to 714,000: 125 coins
+  * 714,001 to 2,124,000: 62 coins
+  * 2,124,001 to 4,248,000: 46 coins
+  * 4,248,001 to 6,700,000: 23 coins
 
-SHIELD Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
-information or see https://opensource.org/licenses/MIT.
+Binaries (pre-compiled wallets) are available on the GitHub [releases page](https://github.com/ShieldCoin/SHIELD/releases/tag/stable).
 
-Development Process
--------------------
 
-The `master` branch is regularly built and tested, but is not guaranteed to be
-completely stable. [Tags](https://github.com/shield/shield/tags) are created
-regularly to indicate new official, stable release versions of SHIELD Core.
-
-The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md).
-
-Testing
--------
-
-Testing and code review is the bottleneck for development; we get more pull
-requests than we can review and test on short notice. Please be patient and help out by testing
-other people's pull requests, and remember this is a security-critical project where any mistake might cost people
-lots of money.
-
-### Automated Testing
-
-Developers are strongly encouraged to write [unit tests](src/test/README.md) for new code, and to
-submit new unit tests for old code. Unit tests can be compiled and run
-(assuming they weren't disabled in configure) with: `make check`. Further details on running
-and extending unit tests can be found in [/src/test/README.md](/src/test/README.md).
-
-There are also [regression and integration tests](/test), written
-in Python, that are run automatically on the build server.
-These tests can be run (if the [test dependencies](/test) are installed) with: `test/functional/test_runner.py`
-
-The Travis CI system makes sure that every pull request is built for Windows, Linux, and macOS, and that unit/sanity tests are run automatically.
-
-### Manual Quality Assurance (QA) Testing
-
-Changes should be tested by somebody other than the developer who wrote the
-code. This is especially important for large or high-risk changes. It is useful
-to add a test plan to the pull request description if testing the changes is
-not straightforward.
-
-Translations
-------------
-
-Changes to translations as well as new translations can be submitted to
-[SHIELD Core's Transifex page](https://www.transifex.com/projects/p/shield/).
-
-Translations are periodically pulled from Transifex and merged into the git repository. See the
-[translation process](doc/translation_process.md) for details on how this works.
-
-**Important**: We do not accept translation changes as GitHub pull requests because the next
-pull from Transifex would automatically overwrite them again.
-
-Translators should also subscribe to the [mailing list](https://groups.google.com/forum/#!forum/shield-translators).
+Compiling SHIELD Core
+----------------------
+For Unix, please see [here](blob/master/doc/build-unix.md).<br/>
+For Windows (both 32-bit & 64-bit), please see [here](blob/master/doc/build-windows.md).<br/>
+For Mac, please see [here](blob/master/doc/build-osx.md).<br/>
